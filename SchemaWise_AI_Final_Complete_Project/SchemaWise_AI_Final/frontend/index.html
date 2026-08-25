@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SchemaWise AI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>SchemaWise AI</h1>
+      <p>AI-Based Database Schema Reviewer</p>
+    </div>
+    <div class="top-actions">
+      <button id="themeBtn" class="secondary">🌙 Dark</button>
+      <button id="historyBtn" class="secondary">History</button>
+      <button id="downloadBtn" class="secondary" disabled>Download Report</button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><span>Score</span><strong id="score">--</strong></div>
+    <div class="stat"><span>Tables</span><strong id="tableCount">--</strong></div>
+    <div class="stat"><span>Errors</span><strong id="errorCount">--</strong></div>
+    <div class="stat"><span>Warnings</span><strong id="warningCount">--</strong></div>
+    <div class="stat"><span>Suggestions</span><strong id="suggestionCount">--</strong></div>
+  </section>
+
+  <main class="dashboard">
+    <section class="panel input-panel">
+      <div class="panel-title">1. SQL Input</div>
+
+      <label>Schema Name</label>
+      <input id="schemaName" value="Student Database" />
+
+      <div class="samples">
+        <button data-sample="1">Sample 1</button>
+        <button data-sample="2">Sample 2</button>
+        <button data-sample="3">Sample 3</button>
+        <button data-sample="4">Sample 4</button>
+        <button data-sample="5">Sample 5</button>
+      </div>
+
+      <label>Enter CREATE TABLE SQL</label>
+      <textarea id="sqlInput" spellcheck="false"></textarea>
+
+      <button id="reviewBtn" class="primary">Review Schema</button>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">2. Visualization & Validation</div>
+
+      <div class="steps" id="steps">
+        <span>Validate</span>
+        <span>Parse</span>
+        <span>Keys</span>
+        <span>Relations</span>
+        <span>Score</span>
+        <span>Explain</span>
+      </div>
+
+      <div id="visualization" class="visualization empty">
+        Paste SQL and click <b>Review Schema</b>.
+      </div>
+
+      <h3>Validation Messages</h3>
+      <div id="findings" class="findings">
+        <div class="empty">No review yet.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        3. AI Explanation
+        <span id="aiMode" class="badge">Built-in AI Tutor</span>
+      </div>
+      <div id="explanation" class="explanation">
+        Run a review to see a student-friendly explanation.
+      </div>
+    </section>
+  </main>
+
+  <aside id="historyDrawer" class="drawer">
+    <div class="drawer-head">
+      <h2>Review History</h2>
+      <button id="closeHistory">✕</button>
+    </div>
+    <div id="historyList"></div>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
