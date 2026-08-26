@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from ai_provider import ai_explain, ai_available
 import json
 import re
 import sqlite3
@@ -17,7 +17,10 @@ FRONTEND = BASE / "frontend"
 DB = BASE / "backend" / "history.db"
 
 app = FastAPI(title="SchemaWise AI")
-
+class ExplainRequest(BaseModel):
+    sql: str
+    findings: list
+    score: int
 class ReviewRequest(BaseModel):
     schema_name: str = "Untitled Schema"
     sql: str
@@ -325,7 +328,43 @@ def history_item(rid:int):
         "sql":row["sql_input"]
     })
     return result
+@app.get("/api/status")
+async def status():
+    return {"ai_available": await ai_available()}
 
+@app.post("/api/ai-explain")
+async def ai_explain_endpoint(req: ExplainRequest):
+    problems = [f for f in req.findings if f["severity"] != "passed"]
+    bullet_list = "\n".join(
+        f"- [{f['severity']}] {f['table']}.{f.get('column','')}: {f['message']}"
+        for f in problems[:10]
+    )
+
+    prompt = f"""You are reviewing a student's SQL database schema. You have two inputs:
+
+1) THE RAW SQL:
+{req.sql}
+
+2) THE AUTOMATED (NON-AI) CHECKER'S RESULTS — score {req.score}/100:
+{bullet_list if bullet_list else "No issues flagged."}
+
+Do three things, using these exact section headers:
+
+### Your Independent Review
+Read the SQL yourself and evaluate the schema on its own merits — primary/foreign keys, normalization, naming, nullability, data types. Don't look at the checker's results yet in this section.
+
+### Reviewing the Automated Checker
+Now look at the automated checker's findings above. Note anything it correctly caught, anything it missed that you found in your own review, and anything it flagged that you disagree with or think is a false positive.
+
+### Combined Verdict
+Give the student one clear, encouraging paragraph combining both reviews: the 2-3 most important fixes to make first, and an honest overall sense of schema quality.
+
+Keep the whole response under 350 words, plain text, no markdown tables."""
+
+    explanation = await ai_explain(prompt)
+    if explanation is None:
+        return {"ai_used": False, "explanation": "AI explanation unavailable right now — showing the built-in review only."}
+    return {"ai_used": True, "explanation": explanation}
 app.mount("/static",StaticFiles(directory=FRONTEND),name="static")
 
 @app.get("/")

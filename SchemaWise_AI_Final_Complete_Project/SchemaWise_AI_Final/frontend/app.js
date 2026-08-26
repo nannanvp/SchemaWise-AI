@@ -158,6 +158,22 @@ function render(data){
   setSteps(-1,true);
 }
 
+async function fetchAiExplanation(sqlText, data) {
+  document.getElementById("aiMode").textContent = "Checking AI Tutor…";
+  try {
+    const res = await fetch("/api/ai-explain", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ sql: sqlText, findings: data.findings, score: data.score })
+    });
+    const aiData = await res.json();
+    document.getElementById("aiMode").textContent = aiData.ai_used ? "Online AI Tutor" : "Built-in AI Tutor";
+    document.getElementById("explanation").textContent = aiData.explanation;
+  } catch {
+    document.getElementById("aiMode").textContent = "Built-in AI Tutor";
+  }
+}
+
 $("reviewBtn").onclick=async()=>{
   const sql=$("sqlInput").value.trim();
   if(!sql){ toast("Enter SQL first."); return; }
@@ -180,6 +196,7 @@ $("reviewBtn").onclick=async()=>{
     if(!res.ok) throw new Error(data.detail || "Review failed");
     render(data);
     toast("Review completed");
+    fetchAiExplanation(sql, data);
   }catch(err){
     $("explanation").textContent=err.message;
     setSteps();
