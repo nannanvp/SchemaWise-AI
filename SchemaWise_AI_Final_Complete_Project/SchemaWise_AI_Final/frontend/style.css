@@ -11,6 +11,9 @@
   --success:#159b63;
   --info:#3778db;
   --code:#101826;
+  --editor-bg:#ffffff;
+  --editor-fg:#172033;
+  --editor-caret:#6558ff;
   --shadow:0 10px 28px rgba(31,41,70,.08);
 }
 body.dark {
@@ -20,6 +23,9 @@ body.dark {
   --muted:#9aa8bf;
   --border:#2a3549;
   --code:#080e18;
+  --editor-bg:#080e18;
+  --editor-fg:#dce9ff;
+  --editor-caret:#8d6cff;
   --shadow:0 10px 28px rgba(0,0,0,.25);
 }
 * { box-sizing:border-box; }
@@ -111,14 +117,15 @@ input,textarea {
   padding:10px;
   outline:none;
 }
-textarea {
-  height:390px;
-  resize:vertical;
-  background:var(--code);
-  color:#dce9ff;
-  font-family:Consolas,monospace;
-  line-height:1.5;
-  font-size:13px;
+textarea { 
+  height:390px; 
+  resize:vertical; 
+  background:var(--editor-bg); 
+  color:var(--editor-fg); 
+  caret-color:var(--editor-caret);
+  font-family:Consolas,monospace; 
+  line-height:1.5; 
+  font-size:13px; 
 }
 .samples {
   display:flex;
