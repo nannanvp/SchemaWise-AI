@@ -4,11 +4,6 @@ function renderExplanation(md){
     return;
   }
 
-  const icons = {
-    "Your Independent Review": "🧠",
-    "Reviewing the Automated Checker": "🔍",
-    "Combined Verdict": "✅"
-  };
 
   const parts = md.split(/^### /m).filter(Boolean);
 
@@ -24,7 +19,7 @@ function renderExplanation(md){
 
     return `
       <div class="explanation-section">
-        <h4>${icons[title] || "📝"} ${esc(title)}</h4>
+        <h4>${esc(title)}</h4>
         ${DOMPurify.sanitize(marked.parse(body))}
       </div>`;
   }).join("");
