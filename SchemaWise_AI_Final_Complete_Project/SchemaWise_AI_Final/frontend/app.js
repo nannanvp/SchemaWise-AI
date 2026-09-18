@@ -1,3 +1,34 @@
+function renderExplanation(md){
+  if(!md){
+    $("explanation").innerHTML = "Run a review to see a student-friendly explanation.";
+    return;
+  }
+
+  const icons = {
+    "Your Independent Review": "🧠",
+    "Reviewing the Automated Checker": "🔍",
+    "Combined Verdict": "✅"
+  };
+
+  const parts = md.split(/^### /m).filter(Boolean);
+
+  if(parts.length < 2){
+    $("explanation").innerHTML = DOMPurify.sanitize(marked.parse(md));
+    return;
+  }
+
+  $("explanation").innerHTML = parts.map(part=>{
+    const [titleLine, ...rest] = part.split("\n");
+    const title = titleLine.trim();
+    const body = rest.join("\n").trim();
+
+    return `
+      <div class="explanation-section">
+        <h4>${icons[title] || "📝"} ${esc(title)}</h4>
+        ${DOMPurify.sanitize(marked.parse(body))}
+      </div>`;
+  }).join("");
+}
 const $ = id => document.getElementById(id);
 let latest = null;
 
@@ -154,7 +185,7 @@ function render(data){
     </div>
   `).join("");
 
-  $("explanation").textContent=data.explanation;
+  renderExplanation(data.explanation);
   setSteps(-1,true);
 }
 
@@ -168,7 +199,7 @@ async function fetchAiExplanation(sqlText, data) {
     });
     const aiData = await res.json();
     document.getElementById("aiMode").textContent = aiData.ai_used ? "Online AI Tutor" : "Built-in AI Tutor";
-    document.getElementById("explanation").textContent = aiData.explanation;
+    renderExplanation(aiData.explanation);
   } catch {
     document.getElementById("aiMode").textContent = "Built-in AI Tutor";
   }
