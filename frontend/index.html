@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SchemaWise AI — AI-based database schema reviewer, table designer, DBMS quiz, competitive exam question bank, plus twelve study lessons, downloadable study material and user help." />
+  <meta name="theme-color" content="#fbfaf7" />
+  <title>SchemaWise AI · Schema Review, Designer, Quiz, Exam &amp; Learn</title>
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23fbfaf7'/><rect x='4.5' y='4.5' width='23' height='23' rx='3.5' fill='none' stroke='%231f3a5f' stroke-width='1.5'/><rect x='9' y='10' width='14' height='2.4' rx='1.2' fill='%231f3a5f'/><rect x='9' y='14.8' width='14' height='2.4' rx='1.2' fill='%231f3a5f'/><rect x='9' y='19.6' width='8.5' height='2.4' rx='1.2' fill='%231f3a5f'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- ============================ TABLE OF CONTENTS ============================ -->
+  <aside id="sidebar" class="sidebar">
+    <header class="masthead">
+      <span class="masthead-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="16" cy="8.5" rx="10" ry="4" />
+          <path d="M6 8.5v7.5c0 2.2 4.5 4 10 4s10-1.8 10-4V8.5" />
+          <path d="M6 16v7.5c0 2.2 4.5 4 10 4s10-1.8 10-4V16" />
+        </svg>
+      </span>
+      <span class="masthead-text">
+        <span class="masthead-name" id="mastheadName">SchemaWise <em>AI</em></span>
+        <span class="masthead-sub">Database schema review &amp; study</span>
+      </span>
+    </header>
+
+    <p class="eyebrow">Contents</p>
+
+    <nav id="tabs" class="tabs" aria-label="Contents">
+      <button class="tab active" type="button" data-tab="review"
+              data-title="Schema Review"
+              data-subtitle="Audit a CREATE TABLE script and read the severity-ranked findings.">
+        <span class="tab-num" aria-hidden="true">I.</span>
+        <span class="tab-label">
+          <b>Schema Review</b>
+          <small>Audit SQL, read the findings</small>
+        </span>
+      </button>
+
+      <button class="tab" type="button" data-tab="designer"
+              data-title="Table Designer"
+              data-subtitle="Assemble tables, keys and foreign links; emit clean CREATE TABLE SQL.">
+        <span class="tab-num" aria-hidden="true">II.</span>
+        <span class="tab-label">
+          <b>Table Designer</b>
+          <small>Assemble tables and relationships</small>
+        </span>
+      </button>
+
+      <button class="tab" type="button" data-tab="quiz"
+              data-title="Quiz"
+              data-subtitle="Official GATE PYQs and AI practice with feedback and a running leaderboard.">
+        <span class="tab-num" aria-hidden="true">III.</span>
+        <span class="tab-label">
+          <b>Quiz</b>
+          <small>GATE and AI practice</small>
+        </span>
+      </button>
+
+      <button class="tab" type="button" data-tab="exam"
+              data-title="Exam Questions"
+              data-subtitle="GATE past-paper questions with source references and worked solutions.">
+        <span class="tab-num" aria-hidden="true">IV.</span>
+        <span class="tab-label">
+          <b>Exam Questions</b>
+          <small>Official GATE question archive</small>
+        </span>
+      </button>
+      <button class="tab" type="button" data-tab="learn"
+              data-title="Learn"
+              data-subtitle="Twelve lessons with worked examples and self-checks.">
+        <span class="tab-num" aria-hidden="true">V.</span>
+        <span class="tab-label">
+          <b>Learn</b>
+          <small>Lessons and worked examples</small>
+        </span>
+      </button>
+      <button class="tab" type="button" data-tab="download" data-title="Download" data-subtitle="Save study material and your results.">
+        <span class="tab-num" aria-hidden="true">VI.</span>
+        <span class="tab-label"><b>Download</b><small>Save study material and your results</small></span>
+      </button>
+      <button class="tab" type="button" data-tab="help" data-title="Help" data-subtitle="Tour, answers and troubleshooting.">
+        <span class="tab-num" aria-hidden="true">VII.</span>
+        <span class="tab-label"><b>Help</b><small>Tour, answers and troubleshooting</small></span>
+      </button>
+    </nav>
+
+    <footer class="sidebar-foot">
+      <p class="eyebrow">Status</p>
+      <span id="aiStatus" class="chip" title="AI provider status">AI: checking…</span>
+      <p class="sidebar-note">Built-in tutor · offline question banks · local review history</p>
+    </footer>
+  </aside>
+
+  <!-- ================================== SHELL ================================== -->
+  <main class="app-main">
+    <header class="command-bar">
+      <div class="bar-inner">
+        <button id="navToggle" class="icon-btn nav-toggle" type="button" aria-label="Toggle contents" aria-controls="sidebar" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h10" />
+          </svg>
+        </button>
+
+        <div class="page-head">
+          <h1 id="pageTitle">Schema Review</h1>
+          <p id="pageSubtitle">Audit a CREATE TABLE script and read the severity-ranked findings.</p>
+        </div>
+
+        <div class="cmd-actions">
+          <button id="themeBtn" class="btn btn-ghost btn-sm" type="button">Dark</button>
+          <button id="historyBtn" class="btn btn-ghost btn-sm" type="button">History</button>
+          <button id="downloadBtn" class="btn btn-ghost btn-sm" type="button" disabled>Download Report</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="panels">
+
+      <!-- ============================ I · SCHEMA REVIEW ============================ -->
+      <section class="tab-panel active" id="tab-review">
+        <section class="deck-top">
+          <div class="panel score-card">
+            <div class="score-ring">
+              <svg class="ring-svg" viewBox="0 0 140 140" aria-hidden="true" focusable="false">
+                <circle class="ring-track" cx="70" cy="70" r="54" fill="none" stroke-width="5" />
+                <circle id="scoreRingFill" cx="70" cy="70" r="54" fill="none" stroke-width="5"
+                        stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" />
+              </svg>
+            </div>
+            <div class="score-meta">
+              <p class="eyebrow">Schema health</p>
+              <span id="score" class="score-figure">--</span>
+              <span class="badge">Live audit</span>
+              <p class="hint">Weighted score across keys, normalisation, naming, relations and indexing.</p>
+            </div>
+          </div>
+
+          <div class="metric-tiles">
+            <div class="metric-tile tone-ink">
+              <span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4.5" width="18" height="15" rx="1.5" />
+                  <path d="M3 10h18M9.5 10v9.5" />
+                </svg>
+              </span>
+              <span class="metric-label">Tables</span>
+              <strong id="tableCount" class="metric-value mono">--</strong>
+            </div>
+
+            <div class="metric-tile tone-error">
+              <span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8.6" />
+                  <path d="M12 7.6v5.2M12 16.3h.01" />
+                </svg>
+              </span>
+              <span class="metric-label">Errors</span>
+              <strong id="errorCount" class="metric-value mono">--</strong>
+            </div>
+
+            <div class="metric-tile tone-warning">
+              <span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3.8 2.9 20h18.2L12 3.8Z" />
+                  <path d="M12 10v4.2M12 17.2h.01" />
+                </svg>
+              </span>
+              <span class="metric-label">Warnings</span>
+              <strong id="warningCount" class="metric-value mono">--</strong>
+            </div>
+
+            <div class="metric-tile tone-suggestion">
+              <span class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3.4a6 6 0 0 0-3.4 10.9c.5.4.8 1 .9 1.6h5c.1-.6.4-1.2.9-1.6A6 6 0 0 0 12 3.4Z" />
+                  <path d="M9.6 18.9h4.8M10.6 21.4h2.8" />
+                </svg>
+              </span>
+              <span class="metric-label">Suggestions</span>
+              <strong id="suggestionCount" class="metric-value mono">--</strong>
+            </div>
+          </div>
+        </section>
+
+        <div class="workspace">
+          <section class="panel editor-dock">
+            <div class="panel-head">
+              <div class="panel-head-text">
+                <h2 class="panel-title">SQL Editor</h2>
+                <p class="hint">Name the schema, paste the DDL, then run the audit.</p>
+              </div>
+              <span class="badge">01 · Input</span>
+            </div>
+
+            <div class="field">
+              <label class="label" for="schemaName">Schema name</label>
+              <input id="schemaName" value="Student Database" autocomplete="off" />
+            </div>
+
+            <div class="field">
+              <span class="label" id="samplesLabel">Sample schemas</span>
+              <div class="samples" role="group" aria-labelledby="samplesLabel">
+                <button class="btn btn-ghost btn-sm" type="button" data-sample="1">Sample 1</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-sample="2">Sample 2</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-sample="3">Sample 3</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-sample="4">Sample 4</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-sample="5">Sample 5</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="sqlInput">CREATE TABLE SQL</label>
+              <textarea id="sqlInput" class="code-editor" spellcheck="false" placeholder="CREATE TABLE student ( … );&#10;&#10;CREATE TABLE department ( … );" aria-label="CREATE TABLE SQL input"></textarea>
+            </div>
+
+            <button id="reviewBtn" class="btn btn-primary btn-block" type="button">Review Schema</button>
+          </section>
+
+          <section class="panel output-dock">
+            <div class="panel-head">
+              <div class="panel-head-text">
+                <h2 class="panel-title">Validation Output</h2>
+                <p class="hint">Pipeline stages, schema map and the severity-ranked findings stream.</p>
+              </div>
+              <span class="badge">02 · Output</span>
+            </div>
+
+            <div class="steps" id="steps" aria-label="Review pipeline">
+              <span class="step">Validate</span>
+              <span class="step">Parse</span>
+              <span class="step">Keys</span>
+              <span class="step">Relations</span>
+              <span class="step">Score</span>
+              <span class="step">Explain</span>
+            </div>
+
+            <div id="visualization" class="visualization empty">
+              <div class="viz-empty">
+                <span class="viz-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4.5" width="18" height="15" rx="1.5" />
+                    <path d="M3 10h18M9.5 10v9.5M14.5 14h3.5M14.5 17h3.5" />
+                  </svg>
+                </span>
+                <b>No schema mapped yet</b>
+                <span>Paste SQL in the editor and run <em>Review Schema</em> to draw tables, keys and relationships here.</span>
+              </div>
+            </div>
+
+            <h3 class="section-title">Findings stream</h3>
+            <div id="findings" class="findings stream">
+              <div class="empty">No review yet.</div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel explanation-panel">
+          <div class="panel-head">
+            <div class="panel-head-text">
+              <h2 class="panel-title">AI Tutor Explanation</h2>
+              <p class="hint">A student-friendly walkthrough of what the audit found and why it matters.</p>
+            </div>
+            <span id="aiMode" class="badge">Built-in AI Tutor</span>
+          </div>
+          <div id="explanation" class="explanation">
+            Run a review to see a student-friendly explanation.
+          </div>
+        </section>
+      </section>
+
+      <!-- =========================== II · TABLE DESIGNER =========================== -->
+      <section class="tab-panel" id="tab-designer">
+        <div class="studio-grid grid-sql">
+          <section class="panel studio-canvas">
+            <div class="panel-head">
+              <div class="panel-head-text">
+                <h2 class="panel-title">Table Canvas</h2>
+                <p class="hint">Add columns, mark the primary key, pick data types and link foreign keys — the SQL writes itself.</p>
+              </div>
+              <span class="badge">Blueprint</span>
+            </div>
+
+            <div class="field">
+              <label class="label" for="dtName">Table name</label>
+              <input id="dtName" placeholder="e.g. student" autocomplete="off" />
+            </div>
+
+            <div class="dt-scroll">
+              <div class="cols-head" aria-hidden="true">
+                <span>Column</span>
+                <span>Type</span>
+                <span title="Primary key">PK</span>
+                <span title="Not null">NN</span>
+                <span title="Unique">UQ</span>
+                <span>Foreign key →</span>
+                <span></span>
+              </div>
+              <div id="dtColumns" class="dt-columns"></div>
+            </div>
+
+            <div class="studio-actions">
+              <button id="dtAddColumn" class="btn btn-ghost" type="button">Add Column</button>
+              <button id="dtAddTable" class="btn btn-primary" type="button">Add Table</button>
+            </div>
+          </section>
+
+          <aside class="studio-aside">
+            <section class="panel">
+              <div class="panel-head">
+                <div class="panel-head-text">
+                  <h2 class="panel-title">Designed Tables</h2>
+                  <p class="hint">The schema you are assembling.</p>
+                </div>
+                <span id="dtCount" class="badge">0 tables</span>
+              </div>
+              <div id="dtTableList" class="dt-table-list">
+                <div class="empty">No tables designed yet.</div>
+              </div>
+            </section>
+
+            <section class="panel sql-dock">
+              <div class="panel-head">
+                <div class="panel-head-text">
+                  <h2 class="panel-title">Generated SQL</h2>
+                  <p class="hint">Copy it out or push it straight into the reviewer.</p>
+                </div>
+                <span class="chip">read-only</span>
+              </div>
+              <textarea id="dtSql" class="sql-preview code-editor" spellcheck="false" readonly placeholder="Your CREATE TABLE statements will appear here…" aria-label="Generated SQL"></textarea>
+              <div class="studio-actions">
+                <button id="dtCopy" class="btn btn-ghost btn-sm" type="button">Copy SQL</button>
+                <button id="dtSend" class="btn btn-primary btn-sm" type="button">Send to Review Editor</button>
+                <button id="dtClear" class="btn btn-ghost btn-sm" type="button">Clear All</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =============================== III · QUIZ =============================== -->
+      <section class="tab-panel" id="tab-quiz">
+        <div class="arena">
+          <div class="stage">
+            <section class="panel" id="quizSetupPanel">
+              <div class="panel-head">
+                <div class="panel-head-text">
+                  <h2 class="panel-title">Quiz Setup</h2>
+                  <p class="hint">Practise original GATE PYQs or generate new AI practice questions with explanations.</p>
+                </div>
+                <span class="badge">Drill</span>
+              </div>
+
+              <div class="field">
+                <label class="label" for="quizSource">Question source</label>
+                <select id="quizSource">
+                  <option value="gate">Official GATE PYQs · supplied answer keys</option>
+                  <option value="ai">AI-generated practice · Groq</option>
+                </select>
+                <p class="hint" id="quizModeHint">96 sourced questions across five topics.</p>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label class="label" for="quizName">Your name</label>
+                  <input id="quizName" placeholder="e.g. Ananya" autocomplete="off" />
+                </div>
+                <div class="field">
+                  <label class="label" for="quizTopic">Topic</label>
+                  <select id="quizTopic"><option value="all">All topics</option></select>
+                </div>
+              </div>
+
+              <div class="field">
+                <span class="label" id="difficultyLabel">Original question marks</span>
+                <div class="segmented" id="quizDifficulty" role="group" aria-labelledby="difficultyLabel">
+                  <button data-level="all" class="active" type="button">All marks</button>
+                  <button data-level="one" type="button">1 mark</button>
+                  <button data-level="two" type="button">2 marks</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="quizCount">Number of questions</label>
+                <input id="quizCount" type="number" min="1" max="20" value="5" />
+              </div>
+
+              <button id="quizStart" class="btn btn-primary btn-block" type="button">Start Quiz</button>
+              <p class="hint" id="quizSourceHint"></p>
+            </section>
+
+            <section class="panel" id="quizRunPanel" hidden>
+              <div class="panel-head">
+                <h2 class="panel-title" id="quizProgress">Question 1 of 5</h2>
+                <span id="quizScoreLive" class="badge">Score: 0</span>
+              </div>
+
+              <div class="rail"><div id="quizProgressBar" class="rail-fill"></div></div>
+
+              <div class="quiz-meta">
+                <span id="quizTopicTag" class="chip"></span>
+                <span id="quizDifficultyTag" class="chip"></span>
+              </div>
+
+              <h3 id="quizQuestion" class="quiz-question"></h3>
+              <div id="quizOptions" class="quiz-options"></div>
+
+              <div id="quizFeedback" class="quiz-feedback" hidden></div>
+
+              <div class="quiz-actions">
+                <button id="quizNext" class="btn btn-primary" type="button" hidden>Next Question →</button>
+                <button id="quizSubmit" class="btn btn-primary" type="button" hidden>Submit Quiz</button>
+                <button id="quizQuit" class="btn btn-ghost" type="button">Quit</button>
+              </div>
+            </section>
+
+            <section class="panel" id="quizResultPanel" hidden>
+              <div class="panel-head">
+                <div class="panel-head-text">
+                  <h2 class="panel-title">Scoreboard</h2>
+                  <p class="hint">Attempt summary and per-question review.</p>
+                </div>
+                <span class="badge">Result</span>
+              </div>
+              <div id="quizResult" class="quiz-result"></div>
+              <div class="quiz-actions">
+                <button id="quizRetry" class="btn btn-primary" type="button">Play Again</button>
+              </div>
+            </section>
+          </div>
+
+          <aside class="rail-col">
+            <section class="panel leaderboard-panel">
+              <div class="panel-head">
+                <div class="panel-head-text">
+                  <h2 class="panel-title">Leaderboard</h2>
+                  <p class="hint">Top 10 attempts by percentage.</p>
+                </div>
+                <button id="leaderRefresh" class="btn btn-ghost btn-sm" type="button">Refresh</button>
+              </div>
+              <div id="leaderboard" class="leaderboard">
+                <div class="empty">No scores yet — be the first!</div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========================== IV · EXAM QUESTIONS ========================== -->
+      <section class="tab-panel" id="tab-exam">
+        <section class="panel filter-bar">
+          <div class="filter-fields">
+            <div class="field">
+              <label class="label" for="examFilter">Exam</label>
+              <select id="examFilter"><option value="all">All exams</option></select>
+            </div>
+            <div class="field">
+              <label class="label" for="examTopicFilter">Topic</label>
+              <select id="examTopicFilter"><option value="all">All topics</option></select>
+            </div>
+            <div class="field">
+              <label class="label" for="examLimit">Limit</label>
+              <select id="examLimit">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20" selected>20</option><option value="100">All 96</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <button id="examLoad" class="btn btn-primary" type="button">Load Questions</button>
+          </div>
+        </section>
+
+        <div id="examList" class="feed">
+          <div class="empty">Click <b>Load Questions</b> to view the question bank.</div>
+        </div>
+
+        <p class="disclaimer">
+          96 GATE PYQs from your supplied ExamGOAL PDFs: the latest 20 per topic,
+          with all 16 available ER Diagrams questions. Original question images preserve
+          the wording, equations and diagrams. Grading follows the supplied answer keys.
+        </p>
+      </section>
+
+      <!-- ===================== V · LEARN ===================== -->
+      <section class="tab-panel" id="tab-learn">
+
+        <!-- -------------------------------- LEARN -------------------------------- -->
+        <section class="panel" id="learnPanel">
+          <div class="panel-head">
+            <div class="panel-head-text">
+              <p class="eyebrow">Learn</p>
+              <h2 class="panel-title">Twelve lessons in database design</h2>
+              <p class="hint">
+                Every lesson explains one idea a database designer is expected to know,
+                shows a worked schema and ends with questions you can answer yourself.
+                When you have read one, press <b>Open in Reviewer</b> to send its example
+                through the audit and watch the rules being applied.
+              </p>
+            </div>
+            <button id="lessonToggleAll" class="btn btn-ghost btn-sm" type="button">Expand all</button>
+          </div>
+
+          <div class="lesson-list" id="lessonList">
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">1</span>
+                <span class="lesson-name">The relational model and the key ladder</span>
+                <span class="lesson-tag">Foundations</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can say what a relation is, and how a superkey, a
+                  candidate key, a primary key and an alternate key differ.
+                </p>
+                <p>
+                  A table is a <b>relation</b>: a set of rows, each row a set of values
+                  drawn from the column's domain. Because it is a set, two rows can never
+                  be identical, and the order of rows or columns carries no meaning. Every
+                  other rule in this section exists to keep that promise while many people
+                  change the data at the same time.
+                </p>
+                <ul class="lesson-points">
+                  <li>A <b>superkey</b> is any set of columns that identifies a row. A
+                      <b>candidate key</b> is a superkey with no spare column in it. The
+                      <b>primary key</b> is the candidate key you nominate; the others
+                      become <b>alternate keys</b>.</li>
+                  <li><b>Entity integrity</b> is the rule that the primary key is unique and
+                      never <span class="mono">NULL</span>. Without it a row cannot be
+                      addressed, so nothing can reference the table reliably.</li>
+                  <li>Every non-key column must describe <i>the key, the whole key, and
+                      nothing but the key</i> — the one-line summary of 2NF and 3NF that
+                      you will meet again in lessons 4 to 6.</li>
+                </ul>
+                <pre class="lesson-sql mono">CREATE TABLE student (
+  student_id INT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  date_of_birth DATE
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Is every candidate key also a superkey?</summary>
+                    <p>
+                      Yes. A candidate key is defined as a <i>minimal</i> superkey, so it
+                      identifies a row like any superkey — it simply has no removable
+                      column.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Why is a missing primary key a warning rather than a small suggestion?</summary>
+                    <p>
+                      Because nothing else can be built on the table: foreign keys need a
+                      key to point at, joins need a way to match rows, and without one the
+                      same row can be inserted twice.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">2</span>
+                <span class="lesson-name">Foreign keys and referential integrity</span>
+                <span class="lesson-tag">Keys</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can point a foreign key at the right column, and explain
+                  what happens when the parent row is deleted.
+                </p>
+                <p>
+                  A foreign key stores another table's key. It is what turns two separate
+                  lists of rows into a relationship, and it is the constraint the reviewer
+                  treats most seriously: a reference that cannot be resolved is reported as
+                  an <b>error</b>, not a hint.
+                </p>
+                <ul class="lesson-points">
+                  <li>The target must be a <b>candidate key</b> of the parent — its primary
+                      key or a <span class="mono">UNIQUE</span> column — and the two data
+                      types must match exactly.</li>
+                  <li>A foreign key column may be <span class="mono">NOT NULL</span> or
+                      nullable, and the difference is a design decision: mandatory
+                      (every student belongs to a department) or optional
+                      (a task may have no assignee yet).</li>
+                  <li><span class="mono">ON DELETE</span> governs the break-up:
+                      <span class="mono">RESTRICT</span> refuses,
+                      <span class="mono">CASCADE</span> deletes the children too,
+                      <span class="mono">SET NULL</span> detaches them. Cascade only where
+                      losing the children is genuinely intended.</li>
+                  <li>The parent table must be defined in the same script. One file is one
+                      universe as far as the review is concerned.</li>
+                </ul>
+                <pre class="lesson-sql mono">CREATE TABLE department (
+  department_id INT PRIMARY KEY,
+  department_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE student (
+  student_id INT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  department_id INT NOT NULL,
+  FOREIGN KEY (department_id) REFERENCES department(department_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>May a foreign key point at a column that is only UNIQUE, not the primary key?</summary>
+                    <p>
+                      Yes. The standard requires the target to be a candidate key, and a
+                      <span class="mono">UNIQUE NOT NULL</span> column qualifies. Pointing
+                      at the primary key is the habit to keep, because it never moves.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Should every foreign key carry ON DELETE CASCADE?</summary>
+                    <p>
+                      No. Cascade is right when the children have no meaning without the
+                      parent (an order's line items). It is wrong when the children are
+                      history or accounts in their own right — <span class="mono">RESTRICT</span>
+                      makes the deletion fail loudly instead of quietly destroying records.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">3</span>
+                <span class="lesson-name">Constraints: NOT NULL, UNIQUE, CHECK, DEFAULT</span>
+                <span class="lesson-tag">Constraints</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can choose the constraint that makes an illegal row
+                  impossible, instead of writing code that hopes it never happens.
+                </p>
+                <p>
+                  Constraints are the cheapest documentation you will ever write: the
+                  database enforces them for every reader, every script and every
+                  application. Aim for <i>illegal states unrepresentable</i>.
+                </p>
+                <ul class="lesson-points">
+                  <li><span class="mono">NOT NULL</span> — a value is required. Ask of each
+                      column: "would a missing value be a bug?" If yes, say so.</li>
+                  <li><span class="mono">UNIQUE</span> — no two rows share the value. It
+                      does not mean <i>required</i>: NULLs are permitted and most engines
+                      allow any number of them, because unknowns are not equal to each
+                      other. <span class="mono">NOT NULL UNIQUE</span> is how you say
+                      "required and distinct".</li>
+                  <li><span class="mono">CHECK</span> — a rule over a single row, such as
+                      <span class="mono">CHECK (marks BETWEEN 0 AND 100)</span> or
+                      <span class="mono">CHECK (ends_on &gt; starts_on)</span>. It cannot
+                      look at other rows or other tables; that needs a trigger or the
+                      application.</li>
+                  <li><span class="mono">DEFAULT</span> records the ordinary case
+                      (<span class="mono">joined_on DATE DEFAULT CURRENT_DATE</span>) but is
+                      not a substitute for <span class="mono">NOT NULL</span>.</li>
+                </ul>
+                <p class="lesson-note">
+                  Exam note: MySQL versions before 8.0.16 parsed
+                  <span class="mono">CHECK</span> and silently ignored it — a favourite
+                  question, because the schema looked right while nothing was enforced.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE account (
+  account_id INT PRIMARY KEY,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  display_name VARCHAR(80) NOT NULL,
+  is_active BOOLEAN NOT NULL
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Does UNIQUE stop a second row with the same value if that value is NULL?</summary>
+                    <p>
+                      No, and that surprises people. Uniqueness compares values, and
+                      <span class="mono">NULL</span> is the absence of one, so two unknown
+                      values do not collide. If the column is important, add
+                      <span class="mono">NOT NULL</span>.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Where does "a student may not enrol in more than five courses" belong?</summary>
+                    <p>
+                      Not in a <span class="mono">CHECK</span>: the rule spans several rows
+                      of the enrolment table. It belongs in a trigger or in the
+                      application, and the review will not claim to check it.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">4</span>
+                <span class="lesson-name">Functional dependencies and finding the key</span>
+                <span class="lesson-tag">Normalisation</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can read a set of dependencies, compute an attribute
+                  closure, and say which columns form the key.
+                </p>
+                <p>
+                  A <b>functional dependency</b> <span class="mono">X &rarr; Y</span> says:
+                  for one value of X there is at most one value of Y. Written that way, a
+                  key is simply a set of columns that determines every other column, and
+                  redundancy is a column that many different X's determine.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>Armstrong's axioms</b> generate every dependency implied by a set:
+                      reflexivity (a set determines its own subsets), augmentation (add the
+                      same column to both sides) and transitivity
+                      (<span class="mono">X &rarr; Y</span>, <span class="mono">Y &rarr; Z</span>
+                      gives <span class="mono">X &rarr; Z</span>).</li>
+                  <li>The <b>closure</b> <span class="mono">X&#8314;</span> is everything X
+                      determines. Start with X, then repeatedly add the right-hand side of
+                      any dependency whose left-hand side is already inside. If
+                      <span class="mono">X&#8314;</span> is every column, X is a
+                      <b>superkey</b>; if no smaller set works, X is a <b>candidate key</b>.</li>
+                  <li>A dependency is <b>partial</b> when it needs only part of a composite
+                      key, and <b>transitive</b> when it runs through a non-key column.
+                      Those two words are the whole of 2NF and 3NF.</li>
+                </ul>
+                <p class="lesson-note">
+                  Worked example: <span class="mono">R(A, B, C, D)</span> with
+                  <span class="mono">A &rarr; B</span>, <span class="mono">B &rarr; C</span>,
+                  <span class="mono">A &rarr; D</span>. Close A: {A} then B, C, D — every
+                  column, so A is a superkey and, on its own, the only candidate key.
+                  Because <span class="mono">B &rarr; C</span> has a non-key determinant,
+                  R also holds a transitive dependency, so it is not in 3NF.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE course (
+  course_code VARCHAR(10) PRIMARY KEY,
+  course_title VARCHAR(120) NOT NULL,
+  credit_hours INT NOT NULL
+);
+
+CREATE TABLE course_offering (
+  course_code VARCHAR(10) NOT NULL,
+  term_code VARCHAR(10) NOT NULL,
+  room VARCHAR(20) NOT NULL,
+  PRIMARY KEY (course_code, term_code),
+  FOREIGN KEY (course_code) REFERENCES course(course_code)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>If closing X gives every column, what have you found?</summary>
+                    <p>
+                      That X is a superkey. It becomes a candidate key only if no proper
+                      subset of X determines everything — minimality is the difference
+                      between the two words.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>A &rarr; B and B &rarr; A hold. How many candidate keys are there?</summary>
+                    <p>
+                      Two: {A} and {B} are both minimal, since each determines the other and
+                      hence everything. You nominate one as the primary key and the other
+                      stands as an alternate key.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">5</span>
+                <span class="lesson-name">Normalisation I: 1NF, 2NF and 3NF</span>
+                <span class="lesson-tag">Normalisation</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can spot a repeating group, a partial dependency and a
+                  transitive dependency, and decompose them away.
+                </p>
+                <p>
+                  Normalisation removes the redundancy that makes updates dangerous: if a
+                  fact is stored twice, one day only one copy gets corrected. Each normal
+                  form removes one kind of duplication.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>1NF</b> — one value per cell, and no repeating groups. A
+                      <span class="mono">phone_numbers</span> column holding
+                      <span class="mono">'555-1, 555-2'</span> is a list, not a value.</li>
+                  <li><b>2NF</b> — no non-key column depends on only <i>part</i> of a
+                      composite key. It can only be violated when the key has more than one
+                      column.</li>
+                  <li><b>3NF</b> — no non-key column depends on another non-key column.
+                      Storing <span class="mono">building</span> beside
+                      <span class="mono">department_id</span> is the classic violation,
+                      because the building belongs to the department.</li>
+                </ul>
+                <p class="lesson-note">
+                  Worked decomposition: <span class="mono">enrolment(student_id,
+                  student_name, course_id, course_title, marks)</span> with the key
+                  (student_id, course_id) breaks 2NF twice — student_name depends on
+                  student_id alone, course_title on course_id alone. Split them out and the
+                  redundancy disappears.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE department (
+  department_id INT PRIMARY KEY,
+  department_name VARCHAR(100) NOT NULL UNIQUE,
+  building VARCHAR(60) NOT NULL
+);
+
+CREATE TABLE lecturer (
+  lecturer_id INT PRIMARY KEY,
+  lecturer_name VARCHAR(100) NOT NULL,
+  department_id INT NOT NULL,
+  FOREIGN KEY (department_id) REFERENCES department(department_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Can a table with a single-column primary key break 2NF?</summary>
+                    <p>
+                      No. 2NF asks whether a non-key column depends on part of the key, and
+                      a one-column key has no parts. Such a table is in 2NF as soon as it is
+                      in 1NF — the interesting test for it is 3NF.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Is a decomposition safe as long as it removes redundancy?</summary>
+                    <p>
+                      No — it must also be <b>lossless</b>: joining the pieces on the shared
+                      key must reproduce exactly the original rows, with none invented and
+                      none lost (lesson 6 gives the test).
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">6</span>
+                <span class="lesson-name">Normalisation II: BCNF, lossless joins and when to stop</span>
+                <span class="lesson-tag">Normalisation</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can test a decomposition for losslessness, and say why
+                  3NF and BCNF sometimes disagree.
+                </p>
+                <p>
+                  BCNF tightens 3NF with one sentence: <b>every determinant must be a
+                  superkey</b>. 3NF tolerates a dependency
+                  <span class="mono">X &rarr; A</span> when A is a prime attribute (part of
+                  some candidate key); BCNF does not, which is why a BCNF decomposition can
+                  still lose a dependency.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>Lossless test:</b> split R into R1 and R2 only when
+                      <span class="mono">R1 &cap; R2</span> contains a candidate key of at
+                      least one of them. Joining back then reproduces R exactly.</li>
+                  <li><b>Dependency preservation:</b> check that every original dependency
+                      still holds inside one of the pieces. You can always have lossless
+                      joins; you cannot always have lossless plus every dependency — that is
+                      the 3NF/BCNF trade-off.</li>
+                  <li><b>When to stop:</b> 3NF is the normal target for transaction systems.
+                      Denormalise deliberately — for read-heavy reporting — only with the
+                      cost written down: duplicated facts must be updated together.</li>
+                </ul>
+                <p class="lesson-note">
+                  Classic example: <span class="mono">tutor(student, subject, teacher)</span>
+                  with <span class="mono">(student, subject) &rarr; teacher</span> and
+                  <span class="mono">teacher &rarr; subject</span>. The keys are
+                  (student, subject) and (student, teacher); since teacher alone is not a
+                  superkey, BCNF splits the table — and the first dependency can no longer
+                  be expressed. 3NF keeps it and accepts the redundancy.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE lecturer (
+  lecturer_id INT PRIMARY KEY,
+  lecturer_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE module (
+  module_code VARCHAR(10) PRIMARY KEY,
+  module_title VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE module_tutor (
+  module_code VARCHAR(10) NOT NULL,
+  lecturer_id INT NOT NULL,
+  PRIMARY KEY (module_code, lecturer_id),
+  FOREIGN KEY (module_code) REFERENCES module(module_code),
+  FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Two tables are split on a column that is not a key on either side. What is the risk?</summary>
+                    <p>
+                      The join can multiply rows and invent combinations that never existed
+                      — the decomposition is lossy. Move a candidate key into the shared
+                      overlap first.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Is a denormalised table a mistake?</summary>
+                    <p>
+                      Not if it is a decision. Keep the normalised tables as the source of
+                      truth, copy the data deliberately for reads, and document the refresh
+                      rule — the mistake is duplicating facts by accident.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">7</span>
+                <span class="lesson-name">From ER model to tables</span>
+                <span class="lesson-tag">Modelling</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can turn entities, attributes and relationships into a
+                  schema without guessing where the foreign keys go.
+                </p>
+                <p>
+                  An ER diagram is a picture of nouns and how they connect; a schema is the
+                  same information written as tables. The mapping follows four rules, one
+                  per kind of relationship.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>Entity &rarr; table</b>, <b>attribute &rarr; column</b>, and the
+                      entity's identifier becomes the primary key.</li>
+                  <li><b>1:N</b> — put the foreign key on the <i>many</i> side. A department
+                      has many students, so <span class="mono">student.department_id</span>
+                      points at <span class="mono">department</span>.</li>
+                  <li><b>M:N</b> — neither side can hold the other's key, so the
+                      relationship becomes its own table whose primary key is the pair of
+                      foreign keys. Attributes of the relationship (the enrolment date, the
+                      grade) live there too.</li>
+                  <li><b>1:1</b> — a foreign key with <span class="mono">UNIQUE</span> on the
+                      optional side; <b>weak entities</b> take a composite key made of their
+                      owner's key plus their own discriminator.</li>
+                </ul>
+                <pre class="lesson-sql mono">CREATE TABLE student (
+  student_id INT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE course (
+  course_id INT PRIMARY KEY,
+  course_title VARCHAR(120) NOT NULL,
+  credit_hours INT NOT NULL
+);
+
+CREATE TABLE enrolment (
+  student_id INT NOT NULL,
+  course_id INT NOT NULL,
+  enrolled_on DATE NOT NULL,
+  PRIMARY KEY (student_id, course_id),
+  FOREIGN KEY (student_id) REFERENCES student(student_id),
+  FOREIGN KEY (course_id) REFERENCES course(course_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>A painter paints many paintings; a painting has one painter. Where does the key go?</summary>
+                    <p>
+                      On the many side: <span class="mono">painting.painter_id</span> references
+                      <span class="mono">painter</span>. One column, no new table.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Why must the junction table's primary key be the pair?</summary>
+                    <p>
+                      It stops the same pair being recorded twice — you cannot enrol a
+                      student in the same course again — and it gives the relationship
+                      itself an identity that child rows can reference.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">8</span>
+                <span class="lesson-name">Joins, and what NULL does to a query</span>
+                <span class="lesson-tag">SQL</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can choose the right join, and explain why a comparison
+                  with NULL silently removes rows.
+                </p>
+                <p>
+                  A join combines rows that satisfy a predicate. The join type decides what
+                  happens to the rows that <i>do not</i> match, which is usually the part a
+                  question is really asking about.
+                </p>
+                <ul class="lesson-points">
+                  <li><span class="mono">INNER JOIN</span> keeps matches only;
+                      <span class="mono">LEFT JOIN</span> keeps every row of the left table
+                      and fills the missing right columns with NULL;
+                      <span class="mono">FULL</span> keeps both sides;
+                      <span class="mono">CROSS</span> returns every possible pair, and its row
+                      count is the product of the two tables.</li>
+                  <li><b>NULL is not a value</b>, it is the absence of one. Every comparison
+                      with it is <span class="mono">UNKNOWN</span>, and
+                      <span class="mono">WHERE</span> keeps only rows that are
+                      <span class="mono">TRUE</span> — so
+                      <span class="mono">WHERE x &lt;&gt; 5</span> quietly drops the rows
+                      where x is NULL. Test with
+                      <span class="mono">IS NULL</span> /
+                      <span class="mono">IS NOT NULL</span>.</li>
+                  <li><span class="mono">NOT IN</span> with a NULL anywhere in the list
+                      returns no rows at all, because none of the comparisons is ever TRUE.
+                      <span class="mono">NOT EXISTS</span> is the safe form.</li>
+                  <li>Aggregates skip NULLs: <span class="mono">COUNT(*)</span> counts rows,
+                      <span class="mono">COUNT(col)</span> counts only known values, and
+                      <span class="mono">AVG(col)</span> divides by the known values only.</li>
+                </ul>
+                <p class="lesson-note">
+                  Query to try on the schema below: which sales have no note?
+                  <span class="mono">SELECT sale_id FROM sale WHERE note IS NULL;</span> —
+                  then replace <span class="mono">IS NULL</span> with
+                  <span class="mono">= NULL</span> and watch the answer become empty.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE customer (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE sale (
+  sale_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  sold_on DATE NOT NULL,
+  discount_pct INT,
+  note VARCHAR(200),
+  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>A LEFT JOIN finds no partner. What appears in the right-hand columns?</summary>
+                    <p>
+                      <span class="mono">NULL</span> for every one of them — which is why a
+                      careless <span class="mono">WHERE right_column = 'X'</span> turns a
+                      left join back into an inner join.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Two tables hold 5 and 4 rows. What can you say about a CROSS JOIN?</summary>
+                    <p>
+                      It returns exactly 20 rows — every pair — regardless of any matching
+                      condition, because there is none.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">9</span>
+                <span class="lesson-name">Aggregates, GROUP BY and HAVING</span>
+                <span class="lesson-tag">SQL</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can summarise a table per group, and say why a filter
+                  belongs in WHERE rather than HAVING.
+                </p>
+                <p>
+                  Aggregates collapse many rows into one number. Grouping says <i>per
+                  what</i>; the two filters run at different moments in the query, which is
+                  the whole reason both exist.
+                </p>
+                <ul class="lesson-points">
+                  <li>Only grouped columns and aggregates may appear in the select list of a
+                      grouped query; anything else is ambiguous.</li>
+                  <li><span class="mono">WHERE</span> filters <b>rows before</b> grouping;
+                      <span class="mono">HAVING</span> filters <b>groups after</b> it. So an
+                      aggregate condition (<span class="mono">COUNT(*) &gt; 2</span>) can
+                      only live in <span class="mono">HAVING</span>.</li>
+                  <li><span class="mono">COUNT(*)</span> counts rows;
+                      <span class="mono">COUNT(DISTINCT col)</span> counts distinct known
+                      values; <span class="mono">SUM</span> of no rows is
+                      <span class="mono">NULL</span>, not zero — wrap it in
+                      <span class="mono">COALESCE</span> for a report.</li>
+                  <li>A window function (<span class="mono">SUM(...) OVER (PARTITION BY ...)</span>)
+                      gives a per-row running figure without collapsing the rows, which
+                      older SQL needed a self-join for.</li>
+                </ul>
+                <p class="lesson-note">
+                  Query to try on the schema below: revenue per customer, biggest first —
+                  <span class="mono">SELECT customer_id, SUM(quantity * unit_price) AS revenue
+                  FROM sale GROUP BY customer_id ORDER BY revenue DESC;</span>
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE customer (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE sale (
+  sale_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  quantity INT NOT NULL,
+  unit_price DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Which filter can test COUNT(*), and when does it run?</summary>
+                    <p>
+                      <span class="mono">HAVING</span> — after the groups have been formed.
+                      The same condition in <span class="mono">WHERE</span> is rejected,
+                      because no aggregate exists yet.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>A customer has three rows, one with quantity NULL. What is SUM(quantity)?</summary>
+                    <p>
+                      The total of the two known values: aggregates ignore NULLs, they do
+                      not treat them as zero. If NULL should mean zero, write
+                      <span class="mono">SUM(COALESCE(quantity, 0))</span>.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">10</span>
+                <span class="lesson-name">Indexes and B+ trees</span>
+                <span class="lesson-tag">Performance</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can explain what an index buys, why it is a tree, and when
+                  one is a waste of space.
+                </p>
+                <p>
+                  An index is a second, sorted copy of the values you search by, and most
+                  engines keep it as a <b>B+ tree</b>: keys in order, all data pointers in
+                  the leaves, and the leaves linked left to right so a range scan can walk
+                  them.
+                </p>
+                <ul class="lesson-points">
+                  <li>A node holds hundreds of keys, so the tree stays shallow — three or
+                      four levels for millions of rows. A lookup is a few page reads instead
+                      of a table scan, which is what <span class="mono">O(log n)</span> means
+                      in practice.</li>
+                  <li><b>Column order matters.</b> An index on
+                      <span class="mono">(course_id, student_id)</span> answers questions
+                      about <span class="mono">course_id</span> alone, but not about
+                      <span class="mono">student_id</span> alone: the index is sorted by the
+                      first column before the second.</li>
+                  <li>A <b>covering index</b> contains every column the query needs, so the
+                      table is never touched. A <b>clustered</b> index decides the physical
+                      order of rows; there is only one.</li>
+                  <li>Indexes are not free: each one takes space and slows every insert,
+                      update and delete. Index the columns you filter and join on, and skip
+                      the ones with few distinct values.</li>
+                </ul>
+                <p class="lesson-note">
+                  Note: this audit reads table definitions, so it suggests an index for
+                  every foreign key whether or not your script declares
+                  <span class="mono">CREATE INDEX</span> — treat the suggestion as the
+                  reminder it is, and add the index yourself as below.
+                </p>
+                <pre class="lesson-sql mono">CREATE TABLE customer (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE invoice (
+  invoice_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  issued_on DATE NOT NULL,
+  total DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+CREATE INDEX idx_invoice_customer ON invoice (customer_id);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Does an index on (a, b) help a query that filters on b only?</summary>
+                    <p>
+                      No — that is the left-prefix rule. The index is ordered by a first, so
+                      it cannot be searched by b alone; you would need a second index
+                      beginning with b.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>When is a table scan the better plan?</summary>
+                    <p>
+                      When the query needs a large share of the table, or the column has few
+                      distinct values: reading the index and then the rows costs more than
+                      reading every page once.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">11</span>
+                <span class="lesson-name">Transactions, ACID and concurrency</span>
+                <span class="lesson-tag">Transactions</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can state the ACID properties, name the three read
+                  anomalies, and say what locking guarantees.
+                </p>
+                <p>
+                  A transaction is a unit of work that either completes or leaves no trace.
+                  Its four promises — <b>atomicity, consistency, isolation, durability</b> —
+                  are what let an application forget about crashes and interleaving.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>Anomalies</b> appear when transactions interleave: a <b>dirty
+                      read</b> reads uncommitted data; a <b>non-repeatable read</b> sees the
+                      same row change twice; a <b>phantom</b> sees new rows appear inside a
+                      range it already read.</li>
+                  <li><b>Isolation levels</b> trade correctness for concurrency:
+                      READ UNCOMMITTED allows all three; READ COMMITTED stops dirty reads;
+                      REPEATABLE READ stops non-repeatable reads (the standard still permits
+                      phantoms — some engines prevent them anyway); SERIALIZABLE prevents
+                      all of them.</li>
+                  <li><b>Two-phase locking</b> takes all its locks before releasing any, and
+                      that is enough to guarantee a serializable schedule — at the price of
+                      blocking and the occasional deadlock, which the engine resolves by
+                      rolling one transaction back.</li>
+                  <li>Bank transfers are the standard example: debit and credit must be one
+                      transaction, so a reader never sees money that exists nowhere.</li>
+                </ul>
+                <pre class="lesson-sql mono">CREATE TABLE branch (
+  branch_id INT PRIMARY KEY,
+  branch_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE account (
+  account_id INT PRIMARY KEY,
+  branch_id INT NOT NULL,
+  balance DECIMAL(12,2) NOT NULL,
+  opened_on DATE NOT NULL,
+  FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Which anomaly does two-phase locking prevent?</summary>
+                    <p>
+                      All three: every schedule it allows is conflict-serializable, so dirty
+                      reads, non-repeatable reads and phantoms cannot be observed.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Why is FLOAT the wrong type for the balance column?</summary>
+                    <p>
+                      Binary floating point cannot represent values such as 0.10 exactly, so
+                      sums of money drift. Use <span class="mono">DECIMAL(12,2)</span> /
+                      <span class="mono">NUMERIC</span>, which stores exact decimal digits.
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="lesson">
+              <summary>
+                <span class="lesson-num" aria-hidden="true">12</span>
+                <span class="lesson-name">Design hygiene: types, names and one fact per column</span>
+                <span class="lesson-tag">Practice</span>
+              </summary>
+              <div class="lesson-body">
+                <p class="lesson-goal">
+                  By the end you can pick sensible types and names, and recognise the small
+                  decisions that are expensive to reverse.
+                </p>
+                <p>
+                  Most "database bugs" are design decisions made early and discovered late.
+                  These are the ones that come up again and again in code review — and in
+                  the audit on the first page.
+                </p>
+                <ul class="lesson-points">
+                  <li><b>Types.</b> Money is <span class="mono">DECIMAL(p,s)</span>, never
+                      <span class="mono">FLOAT</span>. Time is <span class="mono">DATE</span>
+                      or <span class="mono">TIMESTAMP</span>, never a string. Text is
+                      <span class="mono">VARCHAR</span> with a realistic limit;
+                      <span class="mono">CHAR</span> is for fixed-width codes only. Phone
+                      numbers and PINs are text, because their leading zeros matter.</li>
+                  <li><b>One fact per column.</b> No
+                      <span class="mono">address_1_2_or_3</span>, no
+                      <span class="mono">'active: yes'</span> stuffed into a status column —
+                      and no column that is merely a copy of another table's value.</li>
+                  <li><b>Names you can predict.</b>
+                      <span class="mono">snake_case</span>, singular table names,
+                      <span class="mono">*_id</span> for keys,
+                      <span class="mono">*_at</span> for timestamps,
+                      <span class="mono">is_</span>/<span class="mono">has_</span> for
+                      booleans. The same fact keeps the same name in every table.</li>
+                  <li><b>Room for the future.</b> Add
+                      <span class="mono">created_at</span> (and
+                      <span class="mono">updated_at</span>) to anything you may have to
+                      audit, and prefer a surrogate key to a natural one that the world can
+                      change.</li>
+                </ul>
+                <pre class="lesson-sql mono">CREATE TABLE customer (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE purchase_order (
+  order_id INT PRIMARY KEY,
+  placed_on DATE NOT NULL,
+  is_paid BOOLEAN NOT NULL,
+  customer_id INT NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);</pre>
+                <div class="lesson-checks">
+                  <p class="lesson-checks-title">Check yourself</p>
+                  <details class="check">
+                    <summary>Why is a surrogate key safer than an email address as the primary key?</summary>
+                    <p>
+                      People change email addresses, and every child row stores a copy of
+                      the key. A surrogate never changes, is narrow, and leaves the email as
+                      a <span class="mono">UNIQUE</span> column — its real job.
+                    </p>
+                  </details>
+                  <details class="check">
+                    <summary>Name three questions to ask about a newly added column.</summary>
+                    <p>
+                      Can it be NULL — and if so, what does NULL mean here? Which type holds
+                      every value it will ever need? Does any other table already store this
+                      fact?
+                    </p>
+                  </details>
+                </div>
+                <div class="lesson-actions">
+                  <button class="btn btn-ghost btn-sm lesson-open" type="button">Open in Reviewer</button>
+                </div>
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <!-- ------------------------------ DOWNLOAD ------------------------------ -->
+      </section>
+      <section class="tab-panel" id="tab-download">
+        <section class="panel" id="downloadPanel">
+          <div class="panel-head"><div><h2 class="panel-title">Original GATE question PDFs</h2><p class="hint">Complete source chapters, including answer keys. The app uses the latest 20 per topic (16 for ER Diagrams).</p></div></div><div id="gatePdfDownloads" class="question-sources"></div>
+          <div class="panel-head">
+            <div class="panel-head-text">
+              <p class="eyebrow">Download</p>
+              <h2 class="panel-title">Take the material with you</h2>
+              <p class="hint">
+                The study material below is ready at any time and asks nothing of you. Your
+                own results are assembled from what is on screen, inside your browser —
+                nothing is uploaded and nothing is stored on the server. A result stays
+                greyed out until there is something to save.
+              </p>
+            </div>
+          </div>
+
+          <div class="dl-group">
+            <h3 class="dl-group-title">Study material <span class="dl-group-note">ready now</span></h3>
+            <div class="dl-grid">
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Study guide</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">All twelve lessons — explanations, examples and the answer to every self-check — as one printable document for revision.</p>
+                <p class="dl-meta" data-meta="guide">12 lessons with answers.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="lessons-md">Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Cheat sheet</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">Keys and functional dependencies, the normal forms, join types, NULL rules, index rules and ACID on a few pages.</p>
+                <p class="dl-meta" data-meta="cheatsheet">One-page reference.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="cheatsheet-md">Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Glossary</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">The vocabulary of the subject, defined one line at a time — the words examiners use, in alphabetical order.</p>
+                <p class="dl-meta" data-meta="glossary">40+ terms defined.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="glossary-md">Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Revision checklist</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">Every topic in this section as a tick-list, with the question to answer before you tick each box.</p>
+                <p class="dl-meta" data-meta="revision">Tick-list ready.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="revision-md">Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Practice paper</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">The question bank as a worksheet — questions first, citations and the full answer key at the end.</p>
+                <p class="dl-meta" data-meta="practice">Worksheet and answer key.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="practice-md">Download</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dl-group">
+            <h3 class="dl-group-title">Your results <span class="dl-group-note">from this session</span></h3>
+            <div class="dl-grid">
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Review report</b>
+                  <span class="dl-fmt mono">.md</span>
+                </div>
+                <p class="dl-desc">Score, severities, findings with their fixes, and the tutor's explanation.</p>
+                <p class="dl-meta" data-meta="review">Nothing yet — run a review first.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="review-md" disabled>Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Review report</b>
+                  <span class="dl-fmt mono">.json</span>
+                </div>
+                <p class="dl-desc">The same audit as structured data, for scripts and spreadsheets.</p>
+                <p class="dl-meta" data-meta="review">Nothing yet — run a review first.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="review-json" disabled>Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Designed schema</b>
+                  <span class="dl-fmt mono">.sql</span>
+                </div>
+                <p class="dl-desc">Every table currently in the Table Designer, as runnable <span class="mono">CREATE TABLE</span> statements.</p>
+                <p class="dl-meta" data-meta="designer">The designer is empty.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="designer-sql" disabled>Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Quiz score sheet</b>
+                  <span class="dl-fmt mono">.csv</span>
+                </div>
+                <p class="dl-desc">Your last attempt question by question — marking what was right on the first try — plus the top ten.</p>
+                <p class="dl-meta" data-meta="quiz">No completed quiz yet.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="quiz-csv" disabled>Download</button>
+              </div>
+
+              <div class="dl-item">
+                <div class="dl-item-head">
+                  <b>Exam question set</b>
+                  <span class="dl-fmt mono">.csv</span>
+                </div>
+                <p class="dl-desc">The questions currently loaded in the Exam archive, with their options, answer and citation.</p>
+                <p class="dl-meta" data-meta="exam">No questions loaded.</p>
+                <button class="btn btn-ghost btn-sm" type="button" data-export="exam-csv" disabled>Download</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="disclaimer">
+            Question exports include the source PDF, original question images and supplied
+            answer key. The original PDFs below are available for offline study.
+          </p>
+        </section>
+
+        <!-- -------------------------------- HELP -------------------------------- -->
+      </section>
+      <section class="tab-panel" id="tab-help">
+        <section class="panel" id="helpPanel">
+          <div class="panel-head">
+            <div class="panel-head-text">
+              <p class="eyebrow">Help</p>
+              <h2 class="panel-title">How to use this tool — and how to revise with it</h2>
+              <p class="hint">
+                Everything a student needs, in one place: the tour, what your results mean,
+                a revision routine, and the answers to the questions that come up.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">Start here</h3>
+            <ol class="help-steps">
+              <li>
+                <b>Check a schema.</b> Choose one of the sample chips in section I — or
+                paste your own <span class="mono">CREATE TABLE</span> statements — and press
+                <b>Review Schema</b>. You get a score, a ranked list of findings, and a
+                diagram of the tables and how they relate.
+              </li>
+              <li>
+                <b>Design one.</b> In section II, add columns and tick <b>PK</b> /
+                <b>NN</b> / <b>UQ</b>, or point a foreign key at another table. The SQL
+                writes itself; <b>Send to Review Editor</b> hands it straight to section I
+                for checking.
+              </li>
+              <li>
+                <b>Drill the ideas.</b> Section III offers official GATE PYQs or AI-generated practice. Choose a topic and question count; official questions use the supplied PDF keys, while AI practice includes generated answers and explanations. A wrong answer can be
+                retried until you get it — the score sheet remembers that it took a second
+                attempt.
+              </li>
+              <li>
+                <b>Practise exam questions.</b> Section IV holds sourced GATE past-paper
+                questions. Pick your answer first, then use <b>Show answer</b> to
+                reveal the key and the reasoning.
+              </li>
+              <li>
+                <b>Read, then take it away.</b> The twelve lessons in Learn (section V) cover the design
+                rules; Download (section VI) turns them into documents you can print, while
+                <b>History</b> in the command bar reopens earlier reviews.
+              </li>
+            </ol>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">What your review means</h3>
+            <table class="help-table">
+              <thead>
+                <tr>
+                  <th>Verdict</th>
+                  <th>How to read it</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="sev-label">Error</span></td>
+                  <td>Something is broken and will fail in practice — an unresolvable foreign key, for example. Fix these first: the score cannot recover while an error stands.</td>
+                </tr>
+                <tr>
+                  <td><span class="sev-label">Warning</span></td>
+                  <td>A rule is missing that you will regret later, such as a primary key or a required column left nullable. These are the ones markers look for.</td>
+                </tr>
+                <tr>
+                  <td><span class="sev-label">Suggestion</span></td>
+                  <td>Naming, style and possible redundancy. Worth doing, but they rarely change behaviour.</td>
+                </tr>
+                <tr>
+                  <td><span class="sev-label">Passed</span></td>
+                  <td>A check that succeeded. It is listed deliberately, so you can see what was verified rather than assume it.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="help-note">
+              The score is a weighted summary, not a count of findings: errors cost most,
+              suggestions least, and passing checks add nothing. Two schemas with the same
+              number of findings can therefore score differently — and a design that
+              "works" can still score below 100, because a schema can be correct and badly
+              designed at the same time.
+            </p>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">A revision routine that works</h3>
+            <ol class="help-steps">
+              <li>
+                <b>Read one lesson, then prove it.</b> Press <b>Open in Reviewer</b> and
+                read which rules the example passed. Answer the self-check questions before
+                you open the answers — retrieval is what makes an idea stick.
+              </li>
+              <li>
+                <b>Write the schema from memory.</b> Close the lesson and rebuild its
+                example in the Table Designer. When the reviewer scores it well without
+                looking, you own the pattern.
+              </li>
+              <li>
+                <b>Break it on purpose.</b> Remove a primary key, point a foreign key at the
+                wrong table, make a column nullable — then predict the finding before you
+                press Review. Predicting the verdict is the exam skill.
+              </li>
+              <li>
+                <b>Mix the topics.</b> Alternate quizzes with exam questions instead of
+                finishing one type. Interleaving feels harder and works better.
+              </li>
+              <li>
+                <b>Keep a score trail.</b> Export the quiz score sheet after each attempt
+                and watch the "correct after retry" column — it shows what you know and what
+                you are still guessing.
+              </li>
+            </ol>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">Where your work goes</h3>
+            <ul class="lesson-points">
+              <li>Your SQL, reviews and quiz answers are processed by this site's own
+                  server, and reviews and scores are saved in its database so that history
+                  and the leaderboard work.</li>
+              <li>Every download is generated in your browser from what is on screen.
+                  Nothing is uploaded anywhere by exporting.</li>
+              <li>If the tutor is switched on, only the schema text you submit is sent to the
+                  AI service to write an explanation. If it is switched off, the built-in
+                  explanations are used and nothing leaves the server at all.</li>
+            </ul>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">Questions students ask</h3>
+            <div class="faq-list">
+              <details class="faq">
+                <summary>The status chip says "AI: offline" — is something broken?</summary>
+                <p>
+                  No. It means the tutor is unavailable, so explanations come from the
+                  built-in material instead. Reviews, scoring, quizzes and exam questions all
+                  continue to work, which is exactly why the banks are there.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>Why is a foreign key reported as invalid?</summary>
+                <p>
+                  The parent table must be defined <b>in the same script</b> and the column it
+                  points at must be that table's primary key or
+                  <span class="mono">UNIQUE</span>. Check the spelling on both sides and the
+                  data types — <span class="mono">INT</span> must match
+                  <span class="mono">INT</span>.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>Why is a download button greyed out?</summary>
+                <p>
+                  Under <b>Your results</b>, a button waits until there is something to save:
+                  run a review, design a table, finish a quiz or load exam questions. The
+                  line above each button says what is missing. The study material and the
+                  practice paper need nothing and are always available.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>What does "correct after retry" mean on the score sheet?</summary>
+                <p>
+                  You reached the right answer, but not on the first attempt. It is recorded
+                  separately because a second-try answer and a known answer are different
+                  kinds of knowledge — only the first try earns a point.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>Why did my score change when I only renamed a column?</summary>
+                <p>
+                  Naming and consistency are checked too. Keep one convention —
+                  <span class="mono">snake_case</span>, singular table names,
+                  <span class="mono">*_id</span> keys — and the score settles.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>Can I hand in the exported report?</summary>
+                <p>
+                  Yes — the review report is a clean record of what was checked. Add a line
+                  saying which tool produced it. Exam exports include links to the official
+                  papers and answer keys; use those for the original question wording.
+                </p>
+              </details>
+
+              <details class="faq">
+                <summary>Does it work on a phone, or offline?</summary>
+                <p>
+                  The layout collapses to a drawer on small screens, so reviewing and
+                  quizzing work on a phone. Reading and the built-in banks work without
+                  internet; only the optional tutor and the fonts need a connection.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">When something looks wrong</h3>
+            <table class="help-table">
+              <thead>
+                <tr>
+                  <th>What you see</th>
+                  <th>What to do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nothing is reviewed</td>
+                  <td>The reviewer parses <span class="mono">CREATE TABLE</span> statements only. Paste table definitions, or start from a sample chip.</td>
+                </tr>
+                <tr>
+                  <td>A foreign key is called invalid</td>
+                  <td>Define the parent table earlier in the same script, point at its primary key or a <span class="mono">UNIQUE</span> column, and match the types.</td>
+                </tr>
+                <tr>
+                  <td>AI practice is unavailable</td>
+                  <td>Configure the Groq key on the server and check provider limits. You can select Official GATE PYQs while AI is unavailable.</td>
+                </tr>
+                <tr>
+                  <td>The leaderboard is empty again</td>
+                  <td>Scores live on the server. On free hosting the server may restart and clear them; export your score sheet to keep a copy.</td>
+                </tr>
+                <tr>
+                  <td>The first load takes a minute</td>
+                  <td>Free hosting sleeps after a quiet period. Reload once and it wakes up.</td>
+                </tr>
+                <tr>
+                  <td>The print-out is too long</td>
+                  <td>Close the lessons you do not need; printing shows the sections as you left them. The study guide export is the tidier handout.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="disclaimer">
+            <span data-project-name>SchemaWise AI</span> · a DBMS learning suite: schema
+            review, visual design, drill quizzes and competitive-exam practice with a study
+            annex. Built on FastAPI with a dependency-free front end; the AI tutor is
+            optional and the curated material works without it.
+          </p>
+        </section>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================= HISTORY DRAWER ============================= -->
+  <aside id="historyDrawer" class="drawer" aria-label="Review history">
+    <div class="drawer-head">
+      <div class="panel-head-text">
+        <h2 class="panel-title">Review History</h2>
+        <p class="hint">Click an entry to reload it into the review section.</p>
+      </div>
+      <button id="closeHistory" class="icon-btn" type="button" aria-label="Close history">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </div>
+    <div id="historyList"></div>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

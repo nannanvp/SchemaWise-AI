@@ -1,0 +1,42 @@
+[
+  {
+    "topic": "Er Diagrams",
+    "count": 16,
+    "available_count": 16,
+    "sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a",
+    "url": "/static/gate/er-diagrams.pdf",
+    "filename": "GATE CSE Er Diagrams Previous Year Questions with Answer Key.pdf"
+  },
+  {
+    "topic": "File Structures and Indexing",
+    "count": 20,
+    "available_count": 29,
+    "sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19",
+    "url": "/static/gate/file-structures-and-indexing.pdf",
+    "filename": "GATE CSE File Structures and Indexing Previous Year Questions with Answer Key.pdf"
+  },
+  {
+    "topic": "Functional Dependencies and Normalization",
+    "count": 20,
+    "available_count": 54,
+    "sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565",
+    "url": "/static/gate/functional-dependencies-and-normalization.pdf",
+    "filename": "GATE CSE Functional Dependencies and Normalization Previous Year Questions with Answer Key.pdf"
+  },
+  {
+    "topic": "Relational Algebra",
+    "count": 20,
+    "available_count": 39,
+    "sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b",
+    "url": "/static/gate/relational-algebra.pdf",
+    "filename": "GATE CSE Relational Algebra Previous Year Questions with Answer Key.pdf"
+  },
+  {
+    "topic": "Transactions and Concurrency",
+    "count": 20,
+    "available_count": 37,
+    "sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f",
+    "url": "/static/gate/transactions-and-concurrency.pdf",
+    "filename": "GATE CSE Transactions and Concurrency Previous Year Questions with Answer Key.pdf"
+  }
+]

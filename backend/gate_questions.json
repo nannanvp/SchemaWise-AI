@@ -1,0 +1,3129 @@
+[
+  {
+    "id": "file-structures-and-indexing-1",
+    "tag": "GATE CSE 2026 Set 2",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q1",
+    "question_number": 1,
+    "question": "GATE CSE 2026 Set 2 — File Structures and Indexing, Q1",
+    "question_text": "Q1.\nGATE CSE 2026 Set 2\nWhich one of the following is the correct match from  to  ?\n(A)\n, II -M , III -N\n(B)\n(C)\n, III -L\n(D)\nOpen solution\n In the context of DBMS, consider the two sets \n and   given below. \n T \n S \n I:  Logical schema \n L: Views \n II:  Physical schema \n M: File organization and indexes \n III: External schema \n N: Relations",
+    "images": [
+      "/static/gate/file-structures-and-indexing-1-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=2",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0zjkv",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-16",
+    "tag": "GATE CSE 2026 Set 2",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q16",
+    "question_number": 16,
+    "question": "GATE CSE 2026 Set 2 — File Structures and Indexing, Q16",
+    "question_text": "Q16.\nGATE CSE 2026 Set 2\nAn index in a DBMS is said to be dense if an index entry appears for every searchkey value in the\nindexed file. Otherwise it is called a sparse index. Consider the following two statements.\nS1: A hash index must be a dense index\nS2: A \ntree index can be a sparse index\nWhich one of the following options is correct?\n(A) Both S 1 and S 2 are true\n(B) Both S 1 and S 2 are false\n(C) S 1 is true and S 2 is false\n(D) S1 is false and S2 is true\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-16-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=5",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0zx31",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-1",
+    "tag": "GATE CSE 2026 Set 1",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q1",
+    "question_number": 1,
+    "question": "GATE CSE 2026 Set 1 — Functional Dependencies and Normalization, Q1",
+    "question_text": "Q1.\nGATE CSE 2026 Set 1\nLet \n and  be the attributes of a relation in a relational schema. Let \n indicate\nfunctional dependency in the context of a relational database, where \n Which of\nthe following options is/are always true?\n(A) If \n and \n, then \n(B) If \n, then \n or \n(C) If \n and \n, then \n(D) If \n, then \nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-1-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "C, D",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=2",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0yv2w",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-2",
+    "tag": "GATE CSE 2026 Set 1",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q2",
+    "question_number": 2,
+    "question": "GATE CSE 2026 Set 1 — Functional Dependencies and Normalization, Q2",
+    "question_text": "Q2.\nGATE CSE 2026 Set 1\nIn the context of relational database normalization, which of the following statements is/ are true?\n(A) It is always possible to obtain a dependency-preserving 3NF decomposition of a relation\n(B) It is always possible to obtain a dependency-preserving 1NF decomposition of a relation\n(C) It is not always possible to obtain a dependency-preserving BCNF decomposition of a relation\n(D) It is not always possible to obtain a dependency-preserving 2NF decomposition of a relation\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-2-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      1,
+      2
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, B, C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=2",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0yv43",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-20",
+    "tag": "GATE CSE 2026 Set 2",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q20",
+    "question_number": 20,
+    "question": "GATE CSE 2026 Set 2 — Functional Dependencies and Normalization, Q20",
+    "question_text": "Q20.\nGATE CSE 2026 Set 2\nIn the context of schema normalization in relational DBMS, consider a set  of functional\ndependencies. The set of all functional dependencies implied by  is called the closure of . To\ncompute the closure of , Armstrong's Axioms can be applied. Consider \n, and  as sets of\nattributes over a relational schema. The three rules of Armstrong's Axioms are described as follows.\nReflexivity: If \n, then \nAugmentation: If \n, then \n for any \nTransitivity: If \n and \n, then \nThe additional rule of Union is defined as follows.\nUnion: If \n and \n, then \nIt can be proved that the additional rule of Union is also implied by the three rules of Armstrong's\nAxioms. Listed below are four combinations of these three rules. Which one of these combinations\nis both necessary and sufficient for the proof?\n(A) Reflexivity, Augmentation, and Transitivity\n(B) Reflexivity and Augmentation\n(C) Transitivity\n(D) Augmentation and Transitivity\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-20-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=6",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0zsui",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-21",
+    "tag": "GATE CSE 2026 Set 1",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q21",
+    "question_number": 21,
+    "question": "GATE CSE 2026 Set 1 — Functional Dependencies and Normalization, Q21",
+    "question_text": "Q21.\nGATE CSE 2026 Set 1\nConsider a relational database schema with a relation \n. If \n and \n are the\nonly two candidate keys of the relation , then the number of superkeys of relation  is \n .\n(answer in integer)\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-21-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      6.0,
+      6.0
+    ],
+    "answer_label": "(6)",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=6",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz10aah",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-17",
+    "tag": "GATE CSE 2026 Set 1",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q17",
+    "question_number": 17,
+    "question": "GATE CSE 2026 Set 1 — Relational Algebra, Q17",
+    "question_text": "Q17.\nGATE CSE 2026 Set 1\nConsider a relational database schema with two relations \n and \n.\nLet \n be a tuple relational calculus expression. Which one of\nthe following relational algebraic expressions is equivalent to  ?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-17-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=6",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz109q1",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-1",
+    "tag": "GATE CSE 2026 Set 2",
+    "exam": "GATE",
+    "year": 2026,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q1",
+    "question_number": 1,
+    "question": "GATE CSE 2026 Set 2 — Transactions and Concurrency, Q1",
+    "question_text": "1.\nGATE CSE 2026 Set 2\nonsider concurrent execution of two transactions \n and \n in a DBMS, both of which access a data object . For these two transactions to not conflict on ,\nhich one of the following statements must be true?\n) Both \n and \n only read \n(B)\n reads  and \n writes \n)\n writes  and \n reads \n(D) Both \n and \n write \nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-1-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mmz0zkii",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "file-structures-and-indexing-17",
+    "tag": "GATE CSE 2025 Set 2",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q17",
+    "question_number": 17,
+    "question": "GATE CSE 2025 Set 2 — File Structures and Indexing, Q17",
+    "question_text": "Q17.\nGATE CSE 2025 Set 2\nIn a \n- tree where each node can hold at most four key values, a root to leaf path consists of the\nfollowing nodes:\nThe *-marked keys signify that these are data entries in a leaf.\nAssume that a pointer between keys \n and \n points to a subtree containing keys in [ \n ], and\nthat when a leaf is created, the smallest key in it is copied up into its parent. A record with key value\n23 is inserted into the \n- tree.\nThe smallest key value in the parent of the leaf that contains \n is _________ . (Answer in integer)\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-17-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      33.0,
+      33.0
+    ],
+    "answer_label": "33",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=5",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m80a3wth",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-22",
+    "tag": "GATE CSE 2025 Set 2",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q22",
+    "question_number": 22,
+    "question": "GATE CSE 2025 Set 2 — Functional Dependencies and Normalization, Q22",
+    "question_text": "Q22.\nGATE CSE 2025 Set 2\nConsider the following relational schema along with all the functional dependencies that hold on\nthem.\nWhich of the following statement(s) is/are TRUE?\n(A)\n is in 3NF\n(B)\n is in 3 NF\n(C)\n is NOT in 3 NF\n(D)\n is NOT in 3NF\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-22-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "C, D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=6",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m80a3epb",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-23",
+    "tag": "GATE CSE 2025 Set 1",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q23",
+    "question_number": 23,
+    "question": "GATE CSE 2025 Set 1 — Functional Dependencies and Normalization, Q23",
+    "question_text": "Q23.\nGATE CSE 2025 Set 1\nConsider a relational schema team(name, city, owner), with functional dependencies \\{name \n city,\nname \n owner}.\nThe relation team is decomposed into two relations, \n (name, city) and \n (name, owner). Which of\nthe following statement(s) is/are TRUE?\n(A) The relation team is NOT in BCNF.\n(B) The relations \n and \n are in BCNF.\n(C) The decomposition constitutes a lossless join.\n(D) The relation team is NOT in 3NF.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-23-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1,
+      2
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "B, C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=7",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m7wyas2a",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-18",
+    "tag": "GATE CSE 2025 Set 1",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q18",
+    "question_number": 18,
+    "question": "GATE CSE 2025 Set 1 — Relational Algebra, Q18",
+    "question_text": "Q18.\nGATE CSE 2025 Set 1\nConsider two relations describing teams and players in a sports league:\n teams(tid, tname): tid, tname are team-id and team-name, respectively.\n players(pid, pname, tid): pid, pname, and tid denote player-id, player-name and the team-id of the\nplayer, respectively.\nWhich ONE of the following tuple relational calculus queries returns the name of the players who\nplay for the team having tname as ' \n '?\n(A)\n p.pname \n players \n teams  p.tid  t.tid  t.name \n ' \n(B)\n p.pname \n teams \n players  p.tid  t.tid  t.name \n ') \\}\n(C)\n p.pname \n players \n teams  t.name \n ' \n(D)\n teams \n players  t.name  ' Ml ' \nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-18-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=6",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m7wyc15j",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-2",
+    "tag": "GATE CSE 2025 Set 2",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q2",
+    "question_number": 2,
+    "question": "GATE CSE 2025 Set 2 — Transactions and Concurrency, Q2",
+    "question_text": "2.\nGATE CSE 2025 Set 2\nn audit of a banking transactions system has found that on an earlier occasion, two joint holders of account  attempted simultaneous transfers of Rs. 10000\nch from account  to account . Both transactions read the same value, Rs. 11000, as the initial balance in  and were allowed to go through.  was credited Rs.\n0000 twice.  was debited only once and ended up with a balance of Rs. 1000. Which of the following properties is/are certain to have been violated by the\nstem?\n) Atomicity\n(B) Consistency\n(C) Isolation\n(D) Durability\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-2-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1,
+      2
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "B, C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m80a3rp3",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-3",
+    "tag": "GATE CSE 2025 Set 1",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q3",
+    "question_number": 3,
+    "question": "GATE CSE 2025 Set 1 — Transactions and Concurrency, Q3",
+    "question_text": "3.\nGATE CSE 2025 Set 1\nschedule of three database transactions \n, and \n is shown. \n and \n denote read and write of data item  by transaction \n. The\nansaction \n aborts at the end. Which other transaction(s) will be required to be rolled back?\n) Only \n(B) Only \n) Both \n and \n(D) Neither \n nor \nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-3-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m7wyc2xg",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-15",
+    "tag": "GATE CSE 2025 Set 2",
+    "exam": "GATE",
+    "year": 2025,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q15",
+    "question_number": 15,
+    "question": "GATE CSE 2025 Set 2 — Transactions and Concurrency, Q15",
+    "question_text": "15.\nGATE CSE 2025 Set 2\nonsider the database transactions T 1 and T 2, and data items X and Y . Which of the schedule(s) is/are conflict serializable?\n)\n)\n)\n)\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-15-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=3",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/m80a3xh9",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "er-diagrams-1",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q1",
+    "question_number": 1,
+    "question": "GATE CSE 2024 Set 2 — Er Diagrams, Q1",
+    "question_text": "Q1.\nGATE CSE 2024 Set 2\nIn the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of\nthe following statements is TRUE?\n(A) The weak entity set MUST have total participation in the identifying relationship\n(B) The owner entity set MUST have total participation in the identifying relationship\n(C) Both weak and owner entity sets MUST have total participation in the identifying relationship\n(D) Neither weak entity set nor owner entity set MUST have total participation in the identifying\nrelationship\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-1-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=2",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwuf2141",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-2",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q2",
+    "question_number": 2,
+    "question": "GATE CSE 2024 Set 1 — Er Diagrams, Q2",
+    "question_text": "Q2.\nGATE CSE 2024 Set 1\nLet S be the specification : \"Instructors teach courses. Students register for courses. Courses are\nallocated classrooms. Instructors guide students.\" Which one of the following ER diagrams\nCORRECTLY represents S?\n(A) (i)\n(B) (ii)\n(C) (iii)\n(D) (iv)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-2-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=2",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwu8x2q3",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "file-structures-and-indexing-2",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q2",
+    "question_number": 2,
+    "question": "GATE CSE 2024 Set 2 — File Structures and Indexing, Q2",
+    "question_text": "Q2.\nGATE CSE 2024 Set 2\nWhich of the following file organizations is/are I/O efficient for the scan operation in DBMS?\n(A) Sorted\n(B) Heap\n(C) Unclustered tree index\n(D) Unclustered hash index\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-2-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      1
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=2",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwufeydi",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-3",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q3",
+    "question_number": 3,
+    "question": "GATE CSE 2024 Set 1 — File Structures and Indexing, Q3",
+    "question_text": "Q3.\nGATE CSE 2024 Set 1\nIn a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed for which one of\nthe following cases?\n(A) Only the root node\n(B) All leaf nodes\n(C) All internal nodes\n(D) Only the leftmost leaf node\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-3-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=2",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwu90e05",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-3",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q3",
+    "question_number": 3,
+    "question": "GATE CSE 2024 Set 1 — Functional Dependencies and Normalization, Q3",
+    "question_text": "Q3.\nGATE CSE 2024 Set 1\nWhich of the following statements about a relation  in first normal form (1NF) is/are TRUE?\n(A)\n can have a multi-attribute key\n(B)\n cannot have a foreign key\n(C)\n cannot have a composite attribute\n(D)\n cannot have more than one candidate key\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-3-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      2
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=2",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwu93mn7",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-24",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q24",
+    "question_number": 24,
+    "question": "GATE CSE 2024 Set 2 — Functional Dependencies and Normalization, Q24",
+    "question_text": "Q24.\nGATE CSE 2024 Set 2\nA functional dependency \n is termed as a useful functional dependency if and only if it\nsatisfies all the following three conditions:\n is not the empty set.\n is not the empty set.\nIntersection of \n and  is the empty set.\nFor a relation  with 4 attributes, the total number of possible useful functional dependencies is\n_________\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-24-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      50.0,
+      50.0
+    ],
+    "answer_label": "50",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=7",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwugjci1",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-25",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q25",
+    "question_number": 25,
+    "question": "GATE CSE 2024 Set 1 — Functional Dependencies and Normalization, Q25",
+    "question_text": "Q25.\nGATE CSE 2024 Set 1\nThe symbol → indicates functional dependency in the context of a relational database. Which of the\nfollowing options is/are TRUE?\n(A) (X, Y) → (Z, W) implies X → (Z, W)\n(B) (X, Y) → (Z, W) implies (X, Y) → Z\n(C) ((X, Y) → Z and W → Y) implies (X, W) → Z\n(D) (X → Y and Y → Z) implies X → Z\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-25-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1,
+      2,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "B, C, D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=7",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwudcep7",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-1",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q1",
+    "question_number": 1,
+    "question": "GATE CSE 2024 Set 1 — Relational Algebra, Q1",
+    "question_text": "Q1.\nGATE CSE 2024 Set 1\nConsider the following two relations, R(A, B) and S(A, C):\nR\nA\nB\n10\n20\n20\n30\n30\n40\n30\n50\n50\n95\nS\nA\nC\n10\n90\n30\n45\n40\n80\nThe total number of tuples obtained by evaluating the following expression\nis _________\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-1-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      2.0,
+      2.0
+    ],
+    "answer_label": "2",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=2",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwuarcbg",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-19",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q19",
+    "question_number": 19,
+    "question": "GATE CSE 2024 Set 2 — Relational Algebra, Q19",
+    "question_text": "Q19.\nGATE CSE 2024 Set 2\nThe relation schema, Person(\n,\n), describes the city of residence for every person uniquely\nidentified by \n. The following relational algebra operators are available: selection, projection, cross\nproduct, and rename.\nTo find the list of cities where at least 3 persons reside, using the above operators, the minimum\nnumber of cross product operations that must be used is\n(A) 1\n(B) 2\n(C) 3\n(D) 4\nOpen solution\npid",
+    "images": [
+      "/static/gate/relational-algebra-19-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=6",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwug6pxx",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-4",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q4",
+    "question_number": 4,
+    "question": "GATE CSE 2024 Set 2 — Transactions and Concurrency, Q4",
+    "question_text": "4.\nGATE CSE 2024 Set 2\nnce the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are\nflected on disk. This property is called\n) durability\n(B) atomicity\n(C) consistency\n(D) isolation\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-4-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwuf210m",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-5",
+    "tag": "GATE CSE 2024 Set 2",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q5",
+    "question_number": 5,
+    "question": "GATE CSE 2024 Set 2 — Transactions and Concurrency, Q5",
+    "question_text": "5.\nGATE CSE 2024 Set 2\nhich of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?\n) 2PL permits only serializable schedules\n) With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation\n) With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction\n) A deadlock is possible with 2PL\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-5-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      2,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, C, D",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwufgegl",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-16",
+    "tag": "GATE CSE 2024 Set 1",
+    "exam": "GATE",
+    "year": 2024,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q16",
+    "question_number": 16,
+    "question": "GATE CSE 2024 Set 1 — Transactions and Concurrency, Q16",
+    "question_text": "16.\nGATE CSE 2024 Set 1\nonsider the following read-write schedule  over three transactions \n,\n, and \n, where the subscripts in the schedule indicate transaction IDs:\nhich of the following transaction schedules is/are conflict equivalent to ?\n)\n(B)\n(C)\n(D)\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-16-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1,
+      2,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "B, C, D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=4",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lwuddaig",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "er-diagrams-3",
+    "tag": "GATE CSE 2023",
+    "exam": "GATE",
+    "year": 2023,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q3",
+    "question_number": 3,
+    "question": "GATE CSE 2023 — Er Diagrams, Q3",
+    "question_text": "Q3.\nGATE CSE 2023\nWhich one of the options given below refers to the degree (or arity) of a relation in relational\ndatabase systems?\n(A) Number of attributes of its relation schema.\n(B) Number of tuples stored in the relation.\n(C) Number of entries in the relation.\n(D) Number of distinct domains of its relation schema.\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-3-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=3",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1lfey8sen",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "file-structures-and-indexing-18",
+    "tag": "GATE CSE 2023",
+    "exam": "GATE",
+    "year": 2023,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q18",
+    "question_number": 18,
+    "question": "GATE CSE 2023 — File Structures and Indexing, Q18",
+    "question_text": "Q18.\nGATE CSE 2023\nConsider a database of fixed-length records, stored as an ordered file. The database has 25,000\nrecords, with each record being 100 bytes, of which the primary key occupies 15 bytes. The data file\nis block-aligned in that each data record is fully contained within a block. The database is indexed\nby a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts\nthis indexing scheme.\nSuppose the block size of the file system is 1024 bytes, and a pointer to a block occupies 5 bytes.\nThe system uses binary search on the index file to search for a record with a given key. You may\nassume that a binary search on an index file of b blocks takes \n block accesses in the worst\ncase.\nGiven a key, the number of block accesses required to identify the block in the data file that may\ncontain a record with the key, in the worst case, is ___________.\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-18-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      6.0,
+      6.0
+    ],
+    "answer_label": "6",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=6",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1lffdj5p2",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-19",
+    "tag": "GATE CSE 2022",
+    "exam": "GATE",
+    "year": 2022,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q19",
+    "question_number": 19,
+    "question": "GATE CSE 2022 — File Structures and Indexing, Q19",
+    "question_text": "Q19.\nGATE CSE 2022\nConsider two file systems A and B, that use contiguous allocation and linked allocation,\nrespectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a\nnew block in the middle of the file (between 50th and 51st block), whose data is already available in\nthe memory. Assume that there are enough free blocks at the end of the file and that the file control\nblocks are already in memory. Let the number of disk accesses required to insert a block in the\nmiddle of the file in A and B are nA and nB, respectively, then the value of nA + nB is _____________.\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-19-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      153.0,
+      153.0
+    ],
+    "answer_label": "153",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=6",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1l00kav8t",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-4",
+    "tag": "GATE CSE 2022",
+    "exam": "GATE",
+    "year": 2022,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q4",
+    "question_number": 4,
+    "question": "GATE CSE 2022 — Functional Dependencies and Normalization, Q4",
+    "question_text": "Q4.\nGATE CSE 2022\nIn a relational data model, which one of the following statements is TRUE?\n(A) A relation with only two attributes is always in BCNF.\n(B) If all attributes of a relation are prime attributes, then the relation is in BCNF.\n(C) Every relation has at least one non-prime attribute.\n(D) BCNF decompositions preserve functional dependencies.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-4-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=2",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1kzybfw9h",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-5",
+    "tag": "GATE CSE 2022",
+    "exam": "GATE",
+    "year": 2022,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q5",
+    "question_number": 5,
+    "question": "GATE CSE 2022 — Functional Dependencies and Normalization, Q5",
+    "question_text": "Q5.\nGATE CSE 2022\nConsider a relation R(A, B, C, D, E) with the following three functional dependencies.\nAB \n C ; BC \n D ; C \n E;\nThe number of superkeys in the relation R is _________.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-5-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      8.0,
+      8.0
+    ],
+    "answer_label": "8",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=2",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1kzzqn1ed",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-2",
+    "tag": "GATE CSE 2022",
+    "exam": "GATE",
+    "year": 2022,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q2",
+    "question_number": 2,
+    "question": "GATE CSE 2022 — Relational Algebra, Q2",
+    "question_text": "Q2.\nGATE CSE 2022\nConsider the following three relations in a relational database.\nEmployee ( \n , Name), Brand ( \n , bName), Own ( \n , \n)\nWhich of the following relational algebra expressions return the set of elds who own all the brands?\n(A)\neld ( eld, bld (Own) / bld (Brand))\n(B)\neld (Own) \neld (( eld (Own) \nbld (Brand)) \neld, bld (Own))\n(C)\neld ( eld, bld (Own) / bld (Own))\n(D)\neld (( eld (Own) \nbld (Own) / bld (Brand))\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-2-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      1
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=2",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1kzzq0goo",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-17",
+    "tag": "GATE CSE 2022",
+    "exam": "GATE",
+    "year": 2022,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q17",
+    "question_number": 17,
+    "question": "GATE CSE 2022 — Transactions and Concurrency, Q17",
+    "question_text": "17.\nGATE CSE 2022\nt Ri(z) and Wi(z) denote read and write operations on a data element z by a transaction Ti, respectively. Consider the schedule S with four transactions.\n R4(x), R2(x), R3(x), R1(y), W1(y), W2(x), W3(y), R4(y)\nhich one of the following serial schedules is conflict equivalent to S?\n) T1\n T3\n T4\n T2\n(B) T1\n T4\n T3\n T2\n) T4\n T1\n T3\n T2\n(D) T3\n T1\n T4\n T2\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-17-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=4",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/1kzzsqpmd",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "file-structures-and-indexing-4",
+    "tag": "GATE CSE 2021 Set 2",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q4",
+    "question_number": 4,
+    "question": "GATE CSE 2021 Set 2 — File Structures and Indexing, Q4",
+    "question_text": "Q4.\nGATE CSE 2021 Set 2\nA data file consisting of 1,50,000 student-records is stored on a hard disk with block size of 4096\nbytes. The data file is sorted on the primary key RollNo. The size of a record pointer for this disk is 7\nbytes. Each student-record has a candidate key attribute called ANum of size 12 bytes. Suppose an\nindex file with records consisting of two fields, ANum value and the record pointer to the\ncorresponding student record, is built and stored on the same disk. Assume that the records of data\nfile and index file are not split across disk blocks. The number of blocks in the index file is _______\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-4-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      698.0,
+      698.0
+    ],
+    "answer_label": "698",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=2",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599udkwrzvkvb",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-5",
+    "tag": "GATE CSE 2021 Set 1",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q5",
+    "question_number": 5,
+    "question": "GATE CSE 2021 Set 1 — File Structures and Indexing, Q5",
+    "question_text": "Q5.\nGATE CSE 2021 Set 1\nConsider a linear list based implementation in a file system. Each directory is a list of nodes, where\neach node contains the file name along with the file metadata, such as the list of pointers to the\ndata blocks. Consider a given directory foo.\nWhich of the following operations will necessarily require a full scan of foo for successful\ncompletion?\n(A) Renaming of an existing file in foo\n(B) Opening of an existing file in foo\n(C) Deletion of an existing file from foo\n(D) Creation of a new file in foo\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-5-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, D",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=3",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599uckwrznztt",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-6",
+    "tag": "GATE CSE 2021 Set 2",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q6",
+    "question_number": 6,
+    "question": "GATE CSE 2021 Set 2 — Functional Dependencies and Normalization, Q6",
+    "question_text": "Q6.\nGATE CSE 2021 Set 2\nConsider the following statements S1 and S2 about the relational data model:\nS1: A relation scheme can have at most one foreign key.\nS2: A foreign key in a relation scheme R cannot be used to refer to tuples of R.\nWhich one of the following choices is correct? \n(A) S1 is true and S2 is false.  \n(B) Both S1 and S2 are true.  \n(C) Both S1 and S2 are false.  \n(D) S1 is false and S2 is true. \nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-6-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=3",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599udkwrzvrlk",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-26",
+    "tag": "GATE CSE 2021 Set 2",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q26",
+    "question_number": 26,
+    "question": "GATE CSE 2021 Set 2 — Functional Dependencies and Normalization, Q26",
+    "question_text": "Q26.\nGATE CSE 2021 Set 2\nSuppose the following functional dependencies hold on a relation U with attributes P, Q, R, S, and T :\nP → QR\nRS → T\nWhich of the following functional dependencies can be inferred from the above functional\ndependencies?  \n(A) P → R\n(B) PS → T\n(C) R → T\n(D) PS → Q\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-26-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0,
+      1,
+      3
+    ],
+    "answer": null,
+    "answer_range": null,
+    "answer_label": "A, B, D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=7",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599udkwrzvx1r",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-27",
+    "tag": "GATE CSE 2021 Set 1",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q27",
+    "question_number": 27,
+    "question": "GATE CSE 2021 Set 1 — Functional Dependencies and Normalization, Q27",
+    "question_text": "Q27.\nGATE CSE 2021 Set 1\nConsider the relation R(P, Q, S, T, X, Y, Z, W) with the following functional dependencies.\nPQ → X; P → YX; Q → Y; Y → ZW\nConsider the decomposition of the relation R into the constituent relations according to the\nfollowing two decomposition schemes.\nD1 : R = [(P, Q, S, T); (P, T, X); (Q, Y); (Y, Z, W)]\nD2 : R = [(P, Q, S); (T, X); (Q, Y); (Y, Z, W)]\nWhich one of the following options is correct?\n(A) D1 is a lossy decomposition, but D2 is a lossless decomposition.\n(B) Both D1 and D2 are lossless decompositions.\n(C) Both D1 and D2 are lossy decompositions.\n(D) D1 is a lossless decomposition, but D2 is a lossy decomposition.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-27-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=8",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599uckwrzo0z3",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-3",
+    "tag": "GATE CSE 2021 Set 1",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q3",
+    "question_number": 3,
+    "question": "GATE CSE 2021 Set 1 — Relational Algebra, Q3",
+    "question_text": "Q3.\nGATE CSE 2021 Set 1\nA relation r(A, B) in a relational database has 1200 tuples. The attribute A has integer values ranging\nfrom 6 to 20, and the attribute B has integer values ranging from 1 to 20. Assume that the attributes\nA and B are independently distributed. The estimated number of tuples in the output\nof σ(A>10)∨(B=18)(r) is ______\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-3-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      819.0,
+      820.0
+    ],
+    "answer_label": "819 to 820",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=2",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599uckwrzo0c9",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-6",
+    "tag": "GATE CSE 2021 Set 1",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q6",
+    "question_number": 6,
+    "question": "GATE CSE 2021 Set 1 — Transactions and Concurrency, Q6",
+    "question_text": "6.\nGATE CSE 2021 Set 1\nuppose a database system crashes again while recovering from a previous crash. Assume checkpointing is not done by the database either during the\nansactions or during recovery.\nhich of the following statements is/are correct?\n) The same undo and redo list will be used while recovering again.\n) The database will become inconsistent.\n) All the transactions that are already undone and redone will not be recovered again.\n) The system cannot recover any further.\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-6-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599udkwrznzo4",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-18",
+    "tag": "GATE CSE 2021 Set 2",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q18",
+    "question_number": 18,
+    "question": "GATE CSE 2021 Set 2 — Transactions and Concurrency, Q18",
+    "question_text": "18.\nGATE CSE 2021 Set 2\nt S be the following schedule of operations of three transactions T1, T2 and T3 in a relational database system:\n2(Y), R1(X), R3(Z), R1(Y), W1(X), R2(Z), W2(Y), R3(X), W3(Z)\nonsider the statements P and Q below:\nS is conflict-serializable.\nIf T3 commits before T1 finishes, then S is recoverable.\nhich one of the following choices is correct?\n) P is true and Q is false.\n(B) Both P and Q are true.\n) P is false and Q is true.\n(D) Both P and Q are false.\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-18-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=4",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599uckwrzw2q3",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-19",
+    "tag": "GATE CSE 2021 Set 1",
+    "exam": "GATE",
+    "year": 2021,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q19",
+    "question_number": 19,
+    "question": "GATE CSE 2021 Set 1 — Transactions and Concurrency, Q19",
+    "question_text": "19.\nGATE CSE 2021 Set 1\nt ri(z) and wi(z) denote read and write operations respectively on a data item z by a transaction Ti. Consider the following two schedules.\n : r1(x) r1(y) r2(x) r2(y) w2(y) w1(x)\n : r (x) r2(x) r (y) w (y) r1(y) w (x)\nhich one of the following options is correct?\n) S1 is conflict serializable, and S2 is not conflict serializable.\n) S1 is not conflict serializable, and S2 is conflict serializable.\n) Both S1 and S2 are conflict serializable.\n) Neither S1 nor S2 is conflict serializable.\nOpen solutio\n1\n2\n2\n1",
+    "images": [
+      "/static/gate/transactions-and-concurrency-19-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=4",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/40599udkwrzox7t",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "er-diagrams-4",
+    "tag": "GATE CSE 2020",
+    "exam": "GATE",
+    "year": 2020,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q4",
+    "question_number": 4,
+    "question": "GATE CSE 2020 — Er Diagrams, Q4",
+    "question_text": "Q4.\nGATE CSE 2020\nWhich one of the following is used to represent the supporting many-one relationships of a weak\nentity set in an entity-relationship diagram?\n(A) Rectangles with double/bold border\n(B) Diamonds with double/bold border\n(C) Ovals that contain underlined identifiers\n(D) Ovals with double/bold border\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-4-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=3",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/IpGAErgjvSbYjCk2QB1da9i2ynkcrnuq26",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "file-structures-and-indexing-20",
+    "tag": "GATE CSE 2020",
+    "exam": "GATE",
+    "year": 2020,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q20",
+    "question_number": 20,
+    "question": "GATE CSE 2020 — File Structures and Indexing, Q20",
+    "question_text": "Q20.\nGATE CSE 2020\nConsider a database implemented using B+ tree for file indexing and installed on a disk drive with\nblock size of 4 KB. The size of search key is 12 bytes and the size of tree/disk pointer is 8 bytes.\nAssume that the database has one million records. Also assume that no node of the B+ tree and no\nrecords are present initially in main memory. Consider that each record fits into one disk block. The\nminimum number of disk accesses required to retrieve any record in the database is ______.\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-20-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      4.0,
+      4.0
+    ],
+    "answer_label": "4",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=6",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/xRDzRYEiNf3AqPO9ww1da9i2ynkcvg4azp",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-28",
+    "tag": "GATE CSE 2020",
+    "exam": "GATE",
+    "year": 2020,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q28",
+    "question_number": 28,
+    "question": "GATE CSE 2020 — Functional Dependencies and Normalization, Q28",
+    "question_text": "Q28.\nGATE CSE 2020\nConsider a relational table R that is in 3NF, but not in BCNF. Which one of the following statements\nis TRUE?\n(A) A cell in R holds a set instead of an atomic value.\n(B) R has a nontrivial functional dependency X \n A, where X is not a superkey and A is a non-prime\nattribute and X is not a proper subset of any key\n(C) R has a nontrivial functional dependency X \n A, where X is not a superkey and A is a non-prime\nattribute and X is a proper subset of some key.\n(D) R has a nontrivial functional dependency X \n A, where X is not a superkey and A is a prime\nattribute.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-28-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=8",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/C587gEDVIVcciQMa601da9i2ynkcu2ax3x",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "transactions-and-concurrency-20",
+    "tag": "GATE CSE 2020",
+    "exam": "GATE",
+    "year": 2020,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q20",
+    "question_number": 20,
+    "question": "GATE CSE 2020 — Transactions and Concurrency, Q20",
+    "question_text": "20.\nGATE CSE 2020\nonsider a schedule of transactions T1 and T2 :\nere, RX stands for “Read(X)” and WX stands for “Write(X)”. Which one of the following schedules is conflict equivalent to the above schedule?\n)\n)\n)\n)\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-20-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=4",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/x9tcx29QyQWaV96fP21da9i2ynkcu2m85m",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "file-structures-and-indexing-6",
+    "tag": "GATE CSE 2019",
+    "exam": "GATE",
+    "year": 2019,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q6",
+    "question_number": 6,
+    "question": "GATE CSE 2019 — File Structures and Indexing, Q6",
+    "question_text": "Q6.\nGATE CSE 2019\nWhich one of the following statements is NOT correct about the B+ tree data structure used for\ncreating an index of a relational database table?\n(A) B+ tree is a height-balanced tree\n(B) Non-leaf nodes have pointers to data records\n(C) Each leaf node has a pointer to the next leaf node\n(D) Key values in each node are kept in sorted order\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-6-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=3",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lAN9k69aazrjnDSiNrjf76htyjzw1smka",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-29",
+    "tag": "GATE CSE 2019",
+    "exam": "GATE",
+    "year": 2019,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q29",
+    "question_number": 29,
+    "question": "GATE CSE 2019 — Functional Dependencies and Normalization, Q29",
+    "question_text": "Q29.\nGATE CSE 2019\nLet the set of functional dependencies\nF = {QR → S, R → P, S → Q}\nhold on a relation schema X = (PQRS). X is not in BCNF. Suppose X is decomposed into two\nschemas Y and Z, where Y = (PR) and Z = (QRS).\nConsider the two statements given below.\nI. Both Y and Z are in BCNF\nII. Decomposition of X into Y and Z is dependency preserving and lossless\nWhich of the above statements is/are correct?\n(A) I only\n(B) Neither I nor II\n(C) II only\n(D) Both I and II\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-29-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=9",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/kQmVVAYMrwdtIQRBp87kejek27jzpro",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-20",
+    "tag": "GATE CSE 2019",
+    "exam": "GATE",
+    "year": 2019,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q20",
+    "question_number": 20,
+    "question": "GATE CSE 2019 — Relational Algebra, Q20",
+    "question_text": "Q20.\nGATE CSE 2019\nConsider the following relations P(X,Y,Z), Q(X,Y,T) and R(Y,V).\nHow many tuples will be returned by the following relational algebra query?\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-20-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      1.0,
+      1.0
+    ],
+    "answer_label": "1",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=7",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/EPgfR5ELXwIkMEssW57kejek273vd9v",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-7",
+    "tag": "GATE CSE 2019",
+    "exam": "GATE",
+    "year": 2019,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q7",
+    "question_number": 7,
+    "question": "GATE CSE 2019 — Transactions and Concurrency, Q7",
+    "question_text": "7.\nGATE CSE 2019\nonsider the following two statements about database transaction schedules:\nStrict two-phase locking protocol generates conflict serializable schedules that are also recoverable.\nTimestamp-ordering concurrency control protocol with Thomas Write Rule can generate view serializable schedules that are not conflict serializable.\nhich of the above statements is/are TRUE?\n) Both I and II\n(B) I only\n(C) II only\n(D) Neither I nor II\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-7-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/mJPZhtSZtapCqqYLZjjf76htyjzw2lp5b",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "er-diagrams-11",
+    "tag": "GATE CSE 2018",
+    "exam": "GATE",
+    "year": 2018,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q11",
+    "question_number": 11,
+    "question": "GATE CSE 2018 — Er Diagrams, Q11",
+    "question_text": "Q11.\nGATE CSE 2018\nIn an Entity-Relationship \n model, suppose  is a many-to-one relationship from entity set \n to\nentity set \n Assume that \n and \n participate totally in  and that the cardinality of \n is\ngreater than the cardinality of \nWhich one of the following is true about ?\n(A) Every entity in \n is associated with exactly one entity in \n(B) Some entity in \n is associated with more than one entity in \n(C) Every entity in \n is associated with exactly one entity in \n(D) Every entity in \n is associated with at most one entity in \nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-11-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=5",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/KU4zpVrBGnpBx4T0",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "relational-algebra-21",
+    "tag": "GATE CSE 2018",
+    "exam": "GATE",
+    "year": 2018,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q21",
+    "question_number": 21,
+    "question": "GATE CSE 2018 — Relational Algebra, Q21",
+    "question_text": "Q21.\nGATE CSE 2018\nConsider the relations \n and \n where \n is a primary key and \n is a foreign key\nreferencing \n Consider the query\nLet \n denote the natural left outer-join operation. Assume that  and  contain no null values.\nWhich one of the following queries is NOT equivalent to \n?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-21-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=7",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/hGwezUJEG1VGrENU",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "er-diagrams-5",
+    "tag": "GATE CSE 2016 Set 1",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q5",
+    "question_number": 5,
+    "question": "GATE CSE 2016 Set 1 — Er Diagrams, Q5",
+    "question_text": "Q5.\nGATE CSE 2016 Set 1\nWhich of the following is NOT a superkey in a relational schema with attributes \n and\nprimary key \n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-5-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=3",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/uQWI5fHAH1Utccst",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "file-structures-and-indexing-7",
+    "tag": "GATE CSE 2016 Set 2",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q7",
+    "question_number": 7,
+    "question": "GATE CSE 2016 Set 2 — File Structures and Indexing, Q7",
+    "question_text": "Q7.\nGATE CSE 2016 Set 2\nB+ Trees are considered BALANCED because\n(A) the lengths of the paths from the root to all leaf nodes are all equal.\n(B) the lengths of the paths from the root to all leaf nodes differ from each other by at most 1.\n(C) the number of children of any two non-leaf sibling nodes differ by at most 1.\n(D) the number of records in any two leaf nodes differ by at most 1.\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-7-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=3",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/RttrBMDXvJ4Uy8ob",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-7",
+    "tag": "GATE CSE 2016 Set 1",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q7",
+    "question_number": 7,
+    "question": "GATE CSE 2016 Set 1 — Functional Dependencies and Normalization, Q7",
+    "question_text": "Q7.\nGATE CSE 2016 Set 1\nA database of research articles in a journal uses the following schema.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE)\nThe primary key is (VOLUME, NUMBER, STARTPAGE, ENDPAGE) and the following functional\ndependencies exist in the schema.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE) → TITLE\n(VOLUME, NUMBER) → YEAR\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE) → PRICE\nThe database is redesigned to use the following schemas.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, PRICE)\n(VOLUME, NUMBER, YEAR)\nWhich is the weakest normal form that the new database satisfies, but the old one does not?\n(A) 1NF\n(B) 2NF\n(C) 3NF\n(D) BCNF\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-7-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=3",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/r8W4V4KUHL5aTZJN",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "transactions-and-concurrency-8",
+    "tag": "GATE CSE 2016 Set 2",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q8",
+    "question_number": 8,
+    "question": "GATE CSE 2016 Set 2 — Transactions and Concurrency, Q8",
+    "question_text": "8.\nGATE CSE 2016 Set 2\nuppose a database schedule  involves transactions \n Construct the precedence graph of  with vertices representing the transactions and edges\npresenting the conflicts. If  is serializable, which one of the following orderings of the vertices of the precedence graph is guaranteed to yield a serial schedule?\n) Topological order\n(B) Depth-first order\n) Breadth-first order\n(D) Ascending order of transaction indices\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-8-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=2",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/OGBe2zVtB0ddVfTi",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-9",
+    "tag": "GATE CSE 2016 Set 1",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q9",
+    "question_number": 9,
+    "question": "GATE CSE 2016 Set 1 — Transactions and Concurrency, Q9",
+    "question_text": "9.\nGATE CSE 2016 Set 1\nhich one of the following is NOT a part of the \n properties of database transactions?\n) Atomicity\n(B) Consistency\n) Isolation\n(D) Deadlock-freedom\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-9-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=3",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/rOLYHZLURz0yFvwo",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-21",
+    "tag": "GATE CSE 2016 Set 2",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q21",
+    "question_number": 21,
+    "question": "GATE CSE 2016 Set 2 — Transactions and Concurrency, Q21",
+    "question_text": "21.\nGATE CSE 2016 Set 2\nonsider the following database schedule with two transactions, T1 and T2\nS = r2(X); r1(X); r2(Y); w1(X); r1(Y); w2(X); a1; a2\nhere ri(Z) denotes a read operation by transaction Ti on a variable Z, wi(Z) denotes a write operation by Ti on a variable Z and ai denotes an abort by transaction Ti .\nhich one of the following statements about the above schedule is TRUE?\n) S is non-recoverable\n) S is recoverable, but has a cascading abort\n) S does not have a cascading abort\n) S is strict\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-21-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=5",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/92muL83Hth2xt9co",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-22",
+    "tag": "GATE CSE 2016 Set 1",
+    "exam": "GATE",
+    "year": 2016,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q22",
+    "question_number": 22,
+    "question": "GATE CSE 2016 Set 1 — Transactions and Concurrency, Q22",
+    "question_text": "22.\nGATE CSE 2016 Set 1\nonsider the following two phase locking protocol. Suppose a transaction  accesses (for read or write operations), a certain set of objects \n This is\none in the following manner:\nep 1. T acquires exclusive locks to \n in increasing order of their\ndresses.\nep 2. The required operations are performed.\nep 3. All locks are released.\nhis protocol will\n) guarantee serializability and deadlock-freedom\n) guarantee neither serializability nor deadlock-freedom\n) guarantee serializability but not deadlock-freedom\n) guarantee deadlock-freedom but not serializability\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-22-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=5",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/fXhSHkfN9k7eYjjW",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "file-structures-and-indexing-8",
+    "tag": "GATE CSE 2015 Set 2",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q8",
+    "question_number": 8,
+    "question": "GATE CSE 2015 Set 2 — File Structures and Indexing, Q8",
+    "question_text": "Q8.\nGATE CSE 2015 Set 2\nWith reference to the B+ tree index of order 1 shown below, the minimum number of nodes\n(including the Root node) that must be fetched in order to satisfy the following query: “Get all\nrecords with a search key greater than or equal to 7 and less than 15” is _________\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-8-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      5.0,
+      5.0
+    ],
+    "answer_label": "5",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=3",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/QRL88kjP2SBO04Zl",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-9",
+    "tag": "GATE CSE 2015 Set 1",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q9",
+    "question_number": 9,
+    "question": "GATE CSE 2015 Set 1 — File Structures and Indexing, Q9",
+    "question_text": "Q9.\nGATE CSE 2015 Set 1\nA file is organized so that the ordering of data records is the same as or close to the ordering of\ndata entries in some index. Then that index is called\n(A) Dense\n(B) Sparse\n(C) Clustered\n(D) Unclustered\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-9-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=4",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/FQsty6YhOQO6LOpu",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-21",
+    "tag": "GATE CSE 2015 Set 3",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q21",
+    "question_number": 21,
+    "question": "GATE CSE 2015 Set 3 — File Structures and Indexing, Q21",
+    "question_text": "Q21.\nGATE CSE 2015 Set 3\nConsider a B+ tree in which the search key is 12 bytes long, block size is 1024 bytes, record pointer\nis 10 bytes long and block pointer is 8 bytes long. The maximum number of keys that can be\naccommodated in each non-leaf node of the tree is ____.\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-21-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      50.0,
+      50.0
+    ],
+    "answer_label": "50",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=7",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/EQcR4I2QOZ8WP1sP",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-8",
+    "tag": "GATE CSE 2015 Set 3",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q8",
+    "question_number": 8,
+    "question": "GATE CSE 2015 Set 3 — Functional Dependencies and Normalization, Q8",
+    "question_text": "Q8.\nGATE CSE 2015 Set 3\nConsider the relation \n with the following set of functional dependencies\nWhich of the following is the trivial functional dependency in \n where \n is closure of  ?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-8-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=3",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/5fChOkzSBUaTCjCi",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-30",
+    "tag": "GATE CSE 2015 Set 1",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q30",
+    "question_number": 30,
+    "question": "GATE CSE 2015 Set 1 — Functional Dependencies and Normalization, Q30",
+    "question_text": "Q30.\nGATE CSE 2015 Set 1\nConsider an Entity-Relationship (ER) model in which entity sets E1 and E2 are connected by an m : n\nrelationship R12. E1 and E3 are connected by a 1 : n (1 on the side of E1 and n on the side of E3)\nrelationship R13.\nE1 has two single-valued attributes a11 and a12 of which a11 is the key attribute. E2 has two single-\nvalued attributes a21 and a22 of which a21 is the key attribute. E3 has two single-valued attributes\na31 and a32 of which a31 is the key attribute. The relationships do not have any attributes.\nIf a relational model is derived from the above ER model, then the minimum number of relations that\nwould be generated if all the relations are in 3NF is _______.\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-30-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      4.0,
+      4.0
+    ],
+    "answer_label": "4",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=9",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/GZhmis0zJHeU3CSm",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-22",
+    "tag": "GATE CSE 2015 Set 2",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q22",
+    "question_number": 22,
+    "question": "GATE CSE 2015 Set 2 — Relational Algebra, Q22",
+    "question_text": "Q22.\nGATE CSE 2015 Set 2\nConsider two relations \n with the tuples \n and \nAssume that \n is the full natural outer join of \n and \n. Consider the following tuples of\nthe form \n Which one of the following statements is correct?\n(A)\n contains \n but not \n(B)\n contains all of \n(C)\n contains \n but not \n(D)\n contains  but not \nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-22-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=7",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/bj21Erg82L9rZ1gx",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "transactions-and-concurrency-10",
+    "tag": "GATE CSE 2015 Set 2",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q10",
+    "question_number": 10,
+    "question": "GATE CSE 2015 Set 2 — Transactions and Concurrency, Q10",
+    "question_text": "10.\nGATE CSE 2015 Set 2\nonsider the following transaction involving two bank accounts x and y.\nead (x) ; x: = x - 50; write (x); read (y); y: = y + 50;   write (y)\nhe constraint that the sum of the accounts x and y should remain constant is that of\n) Atomicity\n(B) Consistency\n(C) Isolation\n(D) Durability\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-10-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=3",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/hmA2fiFVrF5HBxGj",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-23",
+    "tag": "GATE CSE 2015 Set 3",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q23",
+    "question_number": 23,
+    "question": "GATE CSE 2015 Set 3 — Transactions and Concurrency, Q23",
+    "question_text": "23.\nGATE CSE 2015 Set 3\nonsider the following partial Schedule S involving two transactions \n and \n Only the read and the write operations have been shown. The read operation on\nata item  is denoted by read\n and the write operation on data item  is denoted by write \nuppose that the transaction \n fails immediately after time instance  Which one of the following statements is correct?\n)\n must be aborted and then both \n and \n must be re-started to ensure transaction atomicity\n) Schedule  is non-recoverable and cannot ensure transaction atomicity\n) Only \n must be aborted and then re-started to ensure transaction atomicity\n) Schedule  is recoverable and can ensure atomicity and nothing else needs to be done\nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-23-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=5",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/4MAtBndKomcCbld1",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "transactions-and-concurrency-24",
+    "tag": "GATE CSE 2015 Set 2",
+    "exam": "GATE",
+    "year": 2015,
+    "topic": "Transactions and Concurrency",
+    "source": "Transactions and Concurrency · PDF Q24",
+    "question_number": 24,
+    "question": "GATE CSE 2015 Set 2 — Transactions and Concurrency, Q24",
+    "question_text": "24.\nGATE CSE 2015 Set 2\nonsider a simple checkpointing protocol and the following set of operations in the log.\ntart, \n); (write, \n); (start, \n); (commit, \n); (write, \n);\nheckpoint);\ntart, \n); (write, \n); (commit, \n); (start, \n), (write, \n);\na crash happens now and the system tries to recovver using both undo and redo operations, what are the contents of the undo list and the redo list?\n) Undo: \n Redo: \n(B) Undo: \n) Undo: none; Redo: \n(D) Undo: \n Redo : \nOpen solutio",
+    "images": [
+      "/static/gate/transactions-and-concurrency-24-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/transactions-and-concurrency.pdf#page=5",
+    "answer_key_url": "/static/gate/transactions-and-concurrency.pdf#page=10",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/jKfc5Qx4vcNRfFlS",
+    "source_sha256": "6664b82d61adb9d4e2c3a7294418af138057e5b446d14c7e32ea13bf994e1b8f"
+  },
+  {
+    "id": "er-diagrams-6",
+    "tag": "GATE CSE 2014 Set 2",
+    "exam": "GATE",
+    "year": 2014,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q6",
+    "question_number": 6,
+    "question": "GATE CSE 2014 Set 2 — Er Diagrams, Q6",
+    "question_text": "Q6.\nGATE CSE 2014 Set 2\nGiven an instance of the STUDENTS relation as shown below:\nFor (StudentName, StudentAge) to be a key for this instance, the value \n should NOT be equal to\n________.\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-6-1.png"
+    ],
+    "options": [],
+    "answer_type": "numerical",
+    "answers": [],
+    "answer": null,
+    "answer_range": [
+      19.0,
+      19.0
+    ],
+    "answer_label": "19",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=3",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/cgtOKGxQifYtV6WQ",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "functional-dependencies-and-normalization-9",
+    "tag": "GATE CSE 2014 Set 1",
+    "exam": "GATE",
+    "year": 2014,
+    "topic": "Functional Dependencies and Normalization",
+    "source": "Functional Dependencies and Normalization · PDF Q9",
+    "question_number": 9,
+    "question": "GATE CSE 2014 Set 1 — Functional Dependencies and Normalization, Q9",
+    "question_text": "Q9.\nGATE CSE 2014 Set 1\nConsider the relation schema \n and the set of functional\ndependencies \n on \n What is the key for \n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/functional-dependencies-and-normalization-9-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=4",
+    "answer_key_url": "/static/gate/functional-dependencies-and-normalization.pdf#page=18",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/trAxjV2GMuvG5seQ",
+    "source_sha256": "e75dd7d4f524c71e18e46e0e73a092ed1458ec2ed5056499c1461926b91c2565"
+  },
+  {
+    "id": "relational-algebra-4",
+    "tag": "GATE CSE 2014 Set 3",
+    "exam": "GATE",
+    "year": 2014,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q4",
+    "question_number": 4,
+    "question": "GATE CSE 2014 Set 3 — Relational Algebra, Q4",
+    "question_text": "Q4.\nGATE CSE 2014 Set 3\nWhat is the optimized version of the relation algebra expression \n, where\n are sets of attributes in r with \n and \n are Boolean expressions based on the\nattributes in r?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-4-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=3",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/HiWtvDOXnRtjgNpY",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-23",
+    "tag": "GATE CSE 2014 Set 2",
+    "exam": "GATE",
+    "year": 2014,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q23",
+    "question_number": 23,
+    "question": "GATE CSE 2014 Set 2 — Relational Algebra, Q23",
+    "question_text": "Q23.\nGATE CSE 2014 Set 2\nConsider a join (relation algebra) between relations r(R)and s(S) using the nested loop method.\nThere are 3 buffers each of size equal to disk block size, out of which one buffer is reserved for\nintermediate results. Assuming size(r(R)) < size(s(S)), the join will have fewer number of disk block\naccesses if\n(A) relation r(R) is in the outer loop.\n(B) relation s(S) is in the outer loop.\n(C) join selection factor between r(R) and s(S) is more than 0.5.\n(D) join selection factor between r(R) and s(S) is less than 0.5.\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-23-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=8",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/obEuRKaEqH5s6wLQ",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-24",
+    "tag": "GATE CSE 2014 Set 3",
+    "exam": "GATE",
+    "year": 2014,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q24",
+    "question_number": 24,
+    "question": "GATE CSE 2014 Set 3 — Relational Algebra, Q24",
+    "question_text": "Q24.\nGATE CSE 2014 Set 3\nConsider the relational schema given below, where eId of the relation dependent is a foreign key\nreferring to empId of the relation employee. Assume that every employee has at least one\nassociated dependent in the dependent relation:\nemployee (empId, empName, empAge)\ndependent (depId, eId, depName, depAge)\nConsider the following relational algebra query:\nThe above query evaluates to the set of empIds of employees whose age is greater than that of\n(A) some dependent.\n(B) all dependents.\n(C) some of his/her dependents.\n(D) all of his/her dependents.\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-24-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=8",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/VA9GfWdICLql6cuC",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "er-diagrams-7",
+    "tag": "GATE CSE 2013",
+    "exam": "GATE",
+    "year": 2013,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q7",
+    "question_number": 7,
+    "question": "GATE CSE 2013 — Er Diagrams, Q7",
+    "question_text": "Q7.\nGATE CSE 2013\nAn index is clustered, if\n(A) It is on a set of fields that form a candidate key.\n(B) It is on a set of fields that include the primary key.\n(C) The data records of the file are organized in the same order as the data entries of the index.\n(D) The data records of the file are organized not in the same order as the data entries of the index.\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-7-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=3",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/IaxDvOn1CxBr7Moq",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-8",
+    "tag": "GATE CSE 2012",
+    "exam": "GATE",
+    "year": 2012,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q8",
+    "question_number": 8,
+    "question": "GATE CSE 2012 — Er Diagrams, Q8",
+    "question_text": "Q8.\nGATE CSE 2012\nGiven the basic \n and relational models, which of the following is INCORRECT?\n(A) An attribute of an entity can have more than one value\n(B) An attribute of an entity can be composite\n(C) In a row of a relational table, an attribute can have more than one value\n(D) In a row of a relational table, an attribute can have exactly one value or a NULL value\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-8-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=4",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/YNprsf6OB2N3McFw",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "relational-algebra-25",
+    "tag": "GATE CSE 2012",
+    "exam": "GATE",
+    "year": 2012,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q25",
+    "question_number": 25,
+    "question": "GATE CSE 2012 — Relational Algebra, Q25",
+    "question_text": "Q25.\nGATE CSE 2012\nSuppose R1 (A, B) and R2 (C, D) are two relation schemas. Let r1 and r2 be the corresponding\nrelation instances. B is a foreign key that refers to C in R2. If data in r1 and r2 satisfy referential\nintegrity constraints, which of the following is ALWAYS TRUE?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-25-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=8",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/FRBMIOrI8qiACjIu",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-26",
+    "tag": "GATE CSE 2012",
+    "exam": "GATE",
+    "year": 2012,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q26",
+    "question_number": 26,
+    "question": "GATE CSE 2012 — Relational Algebra, Q26",
+    "question_text": "Q26.\nGATE CSE 2012\nConsider the following relations A, B and C:\nA\nID\nName\nAge\n12\nArun\n60\n15\nShreya\n24\n99\nRohit\n11\nB\nID\nName\nAge\n15\nShreya\n24\n25\nHari\n40\n98\nRohit\n20\n99\nRohit\n11\nC\nID\nPhone\nArea\n10\n2200\n02\n99\n2100\n01\nHow many tuples does the result of the following relational algebra expression contain? Assume\nthat the schema of A ∪ B is the same as that of A. \n(A) 7\n(B) 4\n(C) 5\n(D) 9\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-26-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=9",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/lyp8DIFooGEiPcSP",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-27",
+    "tag": "GATE CSE 2012",
+    "exam": "GATE",
+    "year": 2012,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q27",
+    "question_number": 27,
+    "question": "GATE CSE 2012 — Relational Algebra, Q27",
+    "question_text": "Q27.\nGATE CSE 2012\nConsider the following relations A, B and C:\nA\nID\nName\nAge\n12\nArun\n60\n15\nShreya\n24\n99\nRohit\n11\nB\nID\nName\nAge\n15\nShreya\n24\n25\nHari\n40\n98\nRohit\n20\n99\nRohit\n11\nC\nID\nPhone\nArea\n10\n2200\n02\n99\n2100\n01\nHow many tuples does the result of the following SQL query contain?\nSELECT A.Id \nFROM A \nWHERE A.Age > ALL (SELECT B.Age \n                   FROM B \n                   WHERE B.Name = 'Arun')\n(A) 4\n(B) 3\n(C) 0\n(D) 1\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-27-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=10",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/UgJXo1tbS3iiOii0",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "er-diagrams-9",
+    "tag": "GATE CSE 2011",
+    "exam": "GATE",
+    "year": 2011,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q9",
+    "question_number": 9,
+    "question": "GATE CSE 2011 — Er Diagrams, Q9",
+    "question_text": "Q9.\nGATE CSE 2011\nConsider a relation table with a single record for each registered student with the following\nattributes.\n Unique registration number of each registered student.\n Unique identity number, unique at the national level for each citizen.\n Unique account number at the bank. A student can have multiple accounts or\njoint accounts. This attribute stores the primary account number.\n Name of the student\n Room number of the hostel.\nWhich of the following options is INCORRECT?\n(A)\n is candidate key\n(B)\n can be a primary key\n(C)\n is a candidate key if all students are from the same country\n(D) If  is a superkey such that \n is NULL then \n is also a superkey\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-9-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=4",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/sLD6fcjHeK7mW8Vq",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "relational-algebra-28",
+    "tag": "GATE CSE 2011",
+    "exam": "GATE",
+    "year": 2011,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q28",
+    "question_number": 28,
+    "question": "GATE CSE 2011 — Relational Algebra, Q28",
+    "question_text": "Q28.\nGATE CSE 2011\nConsider a relational table r with sufficient number of records, having attributes A1, A2,....., An and let\n1  p  n. Two queries Q1 and Q2 are given below.\n where is a constant\n where c1 and c2 are constants\nThe database can be configured to do ordered indexing on Ap or hashing on Ap. Which of the\nfollowing statements is TRUE?\n(A) Ordered indexing will always outperform hashing for both queries\n(B) Hashing will always outperform ordered indexing for both queries\n(C) Hashing will outperform ordered indexing on Q1, but not on Q2\n(D) Hashing will outperform ordered indexing on Q2, but not on Q1\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-28-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=11",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/PITGNqZEyRLra1dj",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "file-structures-and-indexing-10",
+    "tag": "GATE CSE 2010",
+    "exam": "GATE",
+    "year": 2010,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q10",
+    "question_number": 10,
+    "question": "GATE CSE 2010 — File Structures and Indexing, Q10",
+    "question_text": "Q10.\nGATE CSE 2010\nConsider a B+- tree in which the maximum number of keys in a node is 5. What is the minimum\nnumber of keys in any non-root node?\n(A) 1\n(B) 2\n(C) 3\n(D) 4\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-10-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=4",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/xYQNtWmqjBak1bUq",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "relational-algebra-29",
+    "tag": "GATE CSE 2010",
+    "exam": "GATE",
+    "year": 2010,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q29",
+    "question_number": 29,
+    "question": "GATE CSE 2010 — Relational Algebra, Q29",
+    "question_text": "Q29.\nGATE CSE 2010\nThe following functional dependencies hold for relations R(A, B, C) and S(B, D, E):\nThe relation R contains 200 tuples and the relation S contains 100 tuples. What is the maximum\nnumber of tuples possible in the natural join R \n S?\n(A) 100\n(B) 200\n(C) 300\n(D) 2000\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-29-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=11",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/NQ8MDNUvEAXuxXEV",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "file-structures-and-indexing-22",
+    "tag": "GATE CSE 2009",
+    "exam": "GATE",
+    "year": 2009,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q22",
+    "question_number": 22,
+    "question": "GATE CSE 2009 — File Structures and Indexing, Q22",
+    "question_text": "Q22.\nGATE CSE 2009\nThe following key values are inserted into a B+-tree in which order of the internal nodes is 3, and that\nof the leaf nodes is 2, in the sequence given below. The order of internal nodes is the maximum\nnumber of tree pointers in each node, and the order of leaf nodes is the maximum number of data\nitems that can be stored in it. The B+- tree is initially empty.\n10, 3, 6, 8, 4, 2, 1\nThe maximum number of times leaf nodes would get split up as a result of these insertions is\n(A) 2\n(B) 3\n(C) 4\n(D) 5\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-22-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=7",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/cuX3gmKY5wFdqeN3",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "er-diagrams-12",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q12",
+    "question_number": 12,
+    "question": "GATE CSE 2008 — Er Diagrams, Q12",
+    "question_text": "Q12.\nGATE CSE 2008\nConsider the following \n diagram\nThe minimum number of table needed to represent \n is\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-12-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=5",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/sT7xeHsBPgpPn6rD",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-13",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q13",
+    "question_number": 13,
+    "question": "GATE CSE 2008 — Er Diagrams, Q13",
+    "question_text": "Q13.\nGATE CSE 2008\nConsider the following \n diagram\nWhich of the following is a correct attribute set for one of the tables for the correct answer to the\nabove question?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-13-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=5",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/2J0XodhUMXIlRMpD",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "file-structures-and-indexing-11",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q11",
+    "question_number": 11,
+    "question": "GATE CSE 2008 — File Structures and Indexing, Q11",
+    "question_text": "Q11.\nGATE CSE 2008\nA clustering index is defined on the fields which are of type\n(A) non-key and ordering\n(B) non-key and non-ordering\n(C) key and ordering\n(D) key and non-ordering\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-11-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=4",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/T7RcK7qq4pFnyNxn",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "file-structures-and-indexing-23",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q23",
+    "question_number": 23,
+    "question": "GATE CSE 2008 — File Structures and Indexing, Q23",
+    "question_text": "Q23.\nGATE CSE 2008\nConsider a file of 16384 records. Each record is 32 bytes long and its key field is of size 6 bytes. The\nfile is ordered on a non-key field, and the file organization is unspanned. The file is stored in a file\nsystem with block size 1024 bytes, and the size of a block pointer is 10 bytes. If the secondary index\nis built on the key field of the file, and a multi-level index scheme is used to store the secondary\nindex, the number of first-level and second-level blocks in the multi-level index are respectively\n(A) 8 and 0\n(B) 128 and 6\n(C) 256 and 4\n(D) 512 and 5\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-23-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=7",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/DLweqP6U1PobdywP",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "relational-algebra-5",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q5",
+    "question_number": 5,
+    "question": "GATE CSE 2008 — Relational Algebra, Q5",
+    "question_text": "Q5.\nGATE CSE 2008\nWhich of the following tuple relational calculus expression(s) is/are equivalent to \n?\nI. \nII. \nIII. \nIV. \n(A) I only\n(B) II only\n(C) III only\n(D) III and IV only\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-5-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=3",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/LK9VrAx4o6FKynbF",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "relational-algebra-30",
+    "tag": "GATE CSE 2008",
+    "exam": "GATE",
+    "year": 2008,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q30",
+    "question_number": 30,
+    "question": "GATE CSE 2008 — Relational Algebra, Q30",
+    "question_text": "Q30.\nGATE CSE 2008\nLet R and S be two relations with the following schema\nR (P, Q, R1, R2, R3)\nS (P, Q, S1, S2)\nWhere {P, Q} is the key for both schemas. Which of the following queries are equivalent?\nI. \nII. \nIII. \nIV. \n(A) Only I and II\n(B) Only I and III\n(C) Only I, II and III\n(D) Only I, III and IV\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-30-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      3
+    ],
+    "answer": 3,
+    "answer_range": null,
+    "answer_label": "D",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=11",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/Tnomo7rfWDIAPMQx",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "file-structures-and-indexing-24",
+    "tag": "GATE CSE 2007",
+    "exam": "GATE",
+    "year": 2007,
+    "topic": "File Structures and Indexing",
+    "source": "File Structures and Indexing · PDF Q24",
+    "question_number": 24,
+    "question": "GATE CSE 2007 — File Structures and Indexing, Q24",
+    "question_text": "Q24.\nGATE CSE 2007\nThe order of a leaf node in a B+- tree is the maximum number of (value, data record pointer) pairs it\ncan hold. Given that the block size is 1K bytes, data record pointer is 7 bytes long, the value field is 9\nbytes long and a block pointer is 6 bytes long, what is the order of the leaf node?\n(A) 63\n(B) 64\n(C) 67\n(D) 68\nOpen solution",
+    "images": [
+      "/static/gate/file-structures-and-indexing-24-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      0
+    ],
+    "answer": 0,
+    "answer_range": null,
+    "answer_label": "A",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/file-structures-and-indexing.pdf#page=7",
+    "answer_key_url": "/static/gate/file-structures-and-indexing.pdf#page=11",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/Qv9Cgd6etHSzGFK0",
+    "source_sha256": "9ee465e72ab00a97bff87eda18b6f96a82d7577a532ef3732917acf22e2ace19"
+  },
+  {
+    "id": "relational-algebra-31",
+    "tag": "GATE CSE 2007",
+    "exam": "GATE",
+    "year": 2007,
+    "topic": "Relational Algebra",
+    "source": "Relational Algebra · PDF Q31",
+    "question_number": 31,
+    "question": "GATE CSE 2007 — Relational Algebra, Q31",
+    "question_text": "Q31.\nGATE CSE 2007\nInformation about a collection of students is given by the relation studInfo(studId, name, sex). The\nrelation enroll(studId, courseId) gives which student has enrolled for (or taken) what course(s).\nAssume that every course is taken by at least one male and at least one female student. What does\nthe following relational algebra expression represent?\n(A) Courses in which all the female students are enrolled.\n(B) Courses in which a proper subset of female students are enrolled.\n(C) Courses in which only male students are enrolled.\n(D) None of the above.\nOpen solution",
+    "images": [
+      "/static/gate/relational-algebra-31-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/relational-algebra.pdf#page=12",
+    "answer_key_url": "/static/gate/relational-algebra.pdf#page=17",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/81FboBD4RkIyuq7j",
+    "source_sha256": "a87b8415586037ddfaca47c5916dfb7cca7d54bc5230b2ec829b7898558ee80b"
+  },
+  {
+    "id": "er-diagrams-10",
+    "tag": "GATE CSE 2005",
+    "exam": "GATE",
+    "year": 2005,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q10",
+    "question_number": 10,
+    "question": "GATE CSE 2005 — Er Diagrams, Q10",
+    "question_text": "Q10.\nGATE CSE 2005\nConsider the entities 'hotel room', and 'person' with a many to many relationship 'lodging' as shown\nbelow\nExamSIDE.com\nHotel \nRoom\nLodging\nPerson\nIf we wish to store information about the rent payment to be made by person(s) occupying different\nhotel rooms, then this information should appear as an attribute of\n(A) Person\n(B) Hotel Room\n(C) Lodging\n(D) None of these\nOpen solution\nMarks 2\n6 questions",
+    "images": [
+      "/static/gate/er-diagrams-10-1.png",
+      "/static/gate/er-diagrams-10-2.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 1,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=4",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/tvRCLQbakZMsSMil",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-14",
+    "tag": "GATE CSE 2005",
+    "exam": "GATE",
+    "year": 2005,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q14",
+    "question_number": 14,
+    "question": "GATE CSE 2005 — Er Diagrams, Q14",
+    "question_text": "Q14.\nGATE CSE 2005\nLet \n and \n be two entities in an E-R diagram with simple single-valued attributes. \n and \n are\ntwo relationships between \n and \n, where \n is one-to-many and \n is many-to-many. \n and \ndo not have any attributes of their own. What is the minimum number of tables required to represent\nthis situation in the relational model?\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-14-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=5",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/Pl7OU5zt8dmcfkFh",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-15",
+    "tag": "GATE CSE 2005",
+    "exam": "GATE",
+    "year": 2005,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q15",
+    "question_number": 15,
+    "question": "GATE CSE 2005 — Er Diagrams, Q15",
+    "question_text": "Q15.\nGATE CSE 2005\nThe following table has two attributes  and  where  is the primary key and  is the foreign key\nreferencing  with on-delete cascade.\nExamSIDE.com\nA\nB\n2\n4\n3\n4\n4\n5\n7\n9\n6\n3\n2\n2\n5\n4\nThe set of all tuples that must be additionally deleted to preserve referential integrity when the tuple\n is deleted is:\n(A)\n and \n(B)\n and \n(C)\n and \n(D)\n and \nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-15-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      2
+    ],
+    "answer": 2,
+    "answer_range": null,
+    "answer_label": "C",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=6",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/YmsYC8ogcln6ECMR",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  },
+  {
+    "id": "er-diagrams-16",
+    "tag": "GATE CSE 2004",
+    "exam": "GATE",
+    "year": 2004,
+    "topic": "Er Diagrams",
+    "source": "Er Diagrams · PDF Q16",
+    "question_number": 16,
+    "question": "GATE CSE 2004 — Er Diagrams, Q16",
+    "question_text": "Q16.\nGATE CSE 2004\nConsider the following entity relationship diagram \n where two entities \n and \n have a\nrelation  of cardinality \nExamSIDE.com\nE1\n1\nR\nm\nE2\nThe attributes of \n are \n and \n where \n is the key attribute. The attributes of \n are\n and \n where \n is the key attribute and \n is a multi-valued attribute. Relation \ndoes not have any attribute. A relational database containing minimum number of tables with each\ntable satisfying the requirements of the third normal form \n is designed form the above \nThe minimum number of tables in the database is\n(A)\n(B)\n(C)\n(D)\nOpen solution",
+    "images": [
+      "/static/gate/er-diagrams-16-1.png"
+    ],
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer_type": "choice",
+    "answers": [
+      1
+    ],
+    "answer": 1,
+    "answer_range": null,
+    "answer_label": "B",
+    "marks": 2,
+    "solution": "Answer from the supplied PDF answer key. Open the source solution for the worked explanation.",
+    "source_url": "/static/gate/er-diagrams.pdf#page=6",
+    "answer_key_url": "/static/gate/er-diagrams.pdf#page=7",
+    "solution_url": "https://questions.examside.com/past-years/gate/question/ZGsql4G73xyS4DQl",
+    "source_sha256": "1bae4262df718c504e259abdd7b830083978bc42e41a52c1e8637ea669f8d38a"
+  }
+]

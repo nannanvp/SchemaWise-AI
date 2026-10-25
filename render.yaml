@@ -1,0 +1,32 @@
+# Render blueprint - free tier.
+# Deploy: dashboard > New + > Blueprint > pick this repository. Render reads this
+# file and creates the service, so no manual build/start commands are needed.
+services:
+  - type: web
+    name: schemawise-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: AI_PROVIDER
+        value: groq
+      # Primary model: Qwen 3.8 27B (multimodal, 131K context, JSON mode).
+      # It is a Groq *preview* model, so the secondary is a production model:
+      # if the preview is unavailable or rate limited, the app switches to it
+      # automatically and keeps working.
+      - key: GROQ_MODEL_PRIMARY
+        value: qwen/qwen3.8-27b
+      - key: GROQ_MODEL_SECONDARY
+        value: openai/gpt-oss-120b
+      - key: ASSIGNED_TOPIC
+        value: DBMS (Database Management Systems)
+      # Set this as a secret in the Render dashboard (never commit it).
+      - key: GROQ_API_KEY
+        sync: false
+      # Optional. The site name normally comes from project_name.txt; set
+      # PROJECT_NAME here only to rename the site without pushing a commit.
+      # An env var value would then take priority over the txt file.
