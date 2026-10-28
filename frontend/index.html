@@ -90,6 +90,12 @@
         <span class="tab-num" aria-hidden="true">VII.</span>
         <span class="tab-label"><b>Help</b><small>Tour, answers and troubleshooting</small></span>
       </button>
+      <button class="tab" type="button" data-tab="about"
+              data-title="About"
+              data-subtitle="The project team and their registration numbers.">
+        <span class="tab-num" aria-hidden="true">VIII.</span>
+        <span class="tab-label"><b>About</b><small>Team and registration numbers</small></span>
+      </button>
     </nav>
 
     <footer class="sidebar-foot">
@@ -1772,6 +1778,95 @@ CREATE TABLE purchase_order (
             review, visual design, drill quizzes and competitive-exam practice with a study
             annex. Built on FastAPI with a dependency-free front end; the AI tutor is
             optional and the curated material works without it.
+          </p>
+        </section>
+      </section>
+
+      <!-- -------------------------------- ABOUT ------------------------------- -->
+      <section class="tab-panel" id="tab-about">
+        <section class="panel" id="aboutPanel">
+          <div class="panel-head">
+            <div class="panel-head-text">
+              <p class="eyebrow">About</p>
+              <h2 class="panel-title">The team behind <span data-project-name>SchemaWise AI</span></h2>
+              <p class="hint">
+                A database design and revision suite for the DBMS course: audit SQL
+                schemas, assemble tables, drill official GATE questions and read the
+                lessons that explain the rules. This page records who built it.
+              </p>
+            </div>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">Project team</h3>
+            <table class="help-table about-team">
+              <caption class="about-caption">
+                Registration numbers as recorded for the Winter Semester 2025–26 submission.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Registration number</th>
+                  <th scope="col">Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">25BCE5047</td>
+                  <td>V NANNAN</td>
+                </tr>
+                <tr>
+                  <td class="mono">25BCE5487</td>
+                  <td>ROHIT K</td>
+                </tr>
+                <tr>
+                  <td class="mono">25BCE5702</td>
+                  <td>PRAGADEESH R</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">What the project contains</h3>
+            <ul class="lesson-points">
+              <li><b>Schema Review</b> — a rule-based audit of
+                  <span class="mono">CREATE TABLE</span> scripts, scored and ranked by
+                  severity, with an optional AI tutor explanation.</li>
+              <li><b>Table Designer</b> — build tables, keys and foreign links, then emit
+                  clean <span class="mono">CREATE TABLE</span> SQL.</li>
+              <li><b>Quiz and Exam Questions</b> — a sourced bank of official GATE
+                  past-year questions plus optional AI-generated practice.</li>
+              <li><b>Learn and Download</b> — twelve lessons on database design and the
+                  study material exported as documents.</li>
+            </ul>
+          </div>
+
+          <div class="help-block">
+            <h3 class="help-title">Built with</h3>
+            <table class="help-table">
+              <tbody>
+                <tr>
+                  <td>Server</td>
+                  <td>FastAPI and Python, serving both the API and the front end from a
+                      single Render service.</td>
+                </tr>
+                <tr>
+                  <td>Front end</td>
+                  <td>Dependency-free HTML, CSS and JavaScript.</td>
+                </tr>
+                <tr>
+                  <td>Question sources</td>
+                  <td>Official GATE past papers, linked to their original PDFs. Source
+                      metadata lives in <span class="mono">frontend/gate/sources.json</span>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="disclaimer">
+            <span data-project-name>SchemaWise AI</span> is a course project. Question
+            images and PDFs remain third-party source material; no authorship or blanket
+            licence is claimed over them.
           </p>
         </section>
       </section>

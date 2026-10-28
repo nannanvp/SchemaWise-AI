@@ -14,6 +14,16 @@ Copy-Item backend/.env.example backend/.env
 
 Open http://127.0.0.1:8001. START_PROJECT.bat also installs dependencies and starts the app. Python 3.11 is supported.
 
+## Project team
+
+| Registration number | Name |
+| --- | --- |
+| 25BCE5047 | V NANNAN |
+| 25BCE5487 | ROHIT K |
+| 25BCE5702 | PRAGADEESH R |
+
+The same list appears in the app under **About** (section VIII).
+
 ## Question sources
 
 Quiz offers two explicit modes:

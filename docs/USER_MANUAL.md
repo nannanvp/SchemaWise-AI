@@ -7,6 +7,7 @@
 - **Learn:** read the DBMS lessons and worked examples.
 - **Download:** download study material, source PDFs and available results.
 - **Help:** read the tour and troubleshooting guidance.
+- **About:** see the project team, with each member's registration number and name.
 
 The AI status indicates provider configuration. To confirm that Groq works, generate a practice question. If AI generation fails, the official bank remains available as a separate selection.
 
